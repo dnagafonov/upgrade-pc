@@ -107,7 +107,8 @@ module.exports = {
         alias: {
             '@': path.resolve(__dirname, 'src'),
             '@scss': path.resolve(__dirname, 'src/scss'),
-            '@assets': path.resolve(__dirname, 'src/assets')
+            '@assets': path.resolve(__dirname, 'src/assets'),
+            '@images': path.resolve(__dirname, 'src/assets/images')
         }
     },
     devtool: isDev ? 'source-map' : '',
