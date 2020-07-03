@@ -1,0 +1,13 @@
+@import "@scss/const.scss";
+
+.button__order {
+  padding: 5px 6px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: $text;
+  border-radius: 25px;
+  background-color: $black;
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+@import '@scss/const.scss';
+
+.list__icon {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list__icon div, 
+.list__icon div::before {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: $c-pr;
+  border-radius: 1px;
+}
+
+.list__icon div, 
+.list__icon div::before {
+  content: '';
+  display: block;
+  transition: 0.2s;
+}
+
+.list__icon .active::before {
+  transform: rotate(90deg);
+}

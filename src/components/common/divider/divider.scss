@@ -1,0 +1,10 @@
+@import '@scss/const.scss';
+
+.divider {
+    width: 100%;
+    
+    .wrapper {
+        height: 2px;
+        background-color: $black;
+    }
+}

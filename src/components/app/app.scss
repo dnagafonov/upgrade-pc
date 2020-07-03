@@ -1,0 +1,9 @@
+@import '@scss/const.scss';
+
+.app {
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: $font;
+  font-weight: $regular;
+  background-color: $white;
+}
