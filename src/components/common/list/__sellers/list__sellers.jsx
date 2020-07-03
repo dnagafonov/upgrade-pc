@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import ListSeller from "../__seller/list__seller";
 
 import "./list__sellers.scss";
+import DividerGray from "../../divider/_gray/divider_gray";
 
 const ListSellers = ({ sellers }) => (
   <div className="list__sellers">
     {sellers && sellers.map((e) => (
       <ListSeller key={e.link} seller={e} />
     ))}
+    <DividerGray />
   </div>
 );
 

@@ -6,6 +6,9 @@ import ListHeader from "./__header/list__header";
 import "./list.scss";
 import DividerGray from "../divider/_gray/divider_gray";
 import ListSellers from "./__sellers/list__sellers";
+import ListSeller from "./__seller/list__seller";
+import ListContent from "./__content/list__content";
+import ListBetter from "./__better/list__better";
 
 const List = ({ className = "", name, img, bestSeller, sellers, isOpen, onClick}) => (
   <div className={`list ${className} ${isOpen ? "list_open" : "list_close"}`} onClick={onClick}>
@@ -14,7 +17,13 @@ const List = ({ className = "", name, img, bestSeller, sellers, isOpen, onClick}
       <ListIcon isOpen={isOpen}/>
     </ListHeader>
     <DividerGray />
-    <ListSellers sellers={sellers} />
+    <ListContent>
+      <ListBetter>
+        <img className="list__image" src={img} alt="good image" width="70" height="70" />
+        <ListSeller seller={bestSeller} />
+      </ListBetter>
+      <ListSellers sellers={sellers} />
+    </ListContent>
   </div>
 );
 

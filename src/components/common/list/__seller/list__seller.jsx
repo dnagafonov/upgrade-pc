@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ButtonOrder from "../../button/__order/button__order";
 
 import "./list__seller.scss";
-import ButtonOrder from "../../button/__order/button__order";
-import DividerGray from "../../divider/_gray/divider_gray";
 
 const ListSeller = ({ seller }) => {
   const { name, price, oldPrice, link } = seller;
