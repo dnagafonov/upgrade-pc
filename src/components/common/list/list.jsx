@@ -10,8 +10,8 @@ import ListSeller from "./__seller/list__seller";
 import ListContent from "./__content/list__content";
 import ListBetter from "./__better/list__better";
 
-const List = ({ className = "", name, img, bestSeller, sellers, isOpen, onClick}) => (
-  <div className={`list ${className} ${isOpen ? "list_open" : "list_close"}`} onClick={onClick}>
+const List = ({ className = "", name, img, bestSeller, sellers, isOpen}) => (
+  <div className={`list ${className} ${isOpen ? "list_open" : "list_close"}`}>
     <ListHeader>
       <div className="list__name">{name}</div>
       <ListIcon isOpen={isOpen}/>

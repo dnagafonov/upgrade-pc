@@ -1,0 +1,26 @@
+@import '@scss/const.scss';
+
+.h1 {
+  font-size: $h1;
+  font-weight: $bold;
+}
+
+.h2 {
+  font-size: $h2;
+  font-weight: $bold;
+}
+
+.h3 {
+  font-size: $h3;
+  font-weight: $bold;
+}
+
+.text {
+  font-size: $text;
+  font-weight: $regular;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
