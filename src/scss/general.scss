@@ -20,7 +20,12 @@
   font-weight: $regular;
 }
 
+.pre {
+  font-size: $text;
+  font-family: $font;
+}
+
 .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
