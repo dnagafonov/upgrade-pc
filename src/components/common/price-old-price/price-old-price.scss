@@ -1,0 +1,20 @@
+@import "@scss/const.scss";
+
+.price-old-price {
+  min-width: 200px;
+  max-width: 250px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: $h3;
+
+  .price {
+    margin-right: 10px;
+    color: $black;
+  }
+
+  .oldPrice {
+    color: $d-gray;
+    text-decoration: line-through;
+  }
+}

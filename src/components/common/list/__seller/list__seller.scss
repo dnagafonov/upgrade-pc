@@ -18,21 +18,5 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-
-    .seller__prices {
-      width: 165px;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-around;
-
-      .seller__price {
-        color: $negative;
-      }
-      
-      .seller__oldPrice {
-        color: $d-gray;
-        text-decoration: line-through;
-      }
-    }
   }
 }

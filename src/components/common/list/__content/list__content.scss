@@ -1,7 +1,15 @@
+@import "@scss/const.scss";
+
 .list__content {
   padding: 10px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   box-sizing: border-box;
+
+  > .note {
+    margin-top: 20px;
+    font-weight: $medium;
+    align-self: flex-start;
+  }
 }

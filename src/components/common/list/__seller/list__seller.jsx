@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ButtonOrder from "../../button/__order/button__order";
+import PriceOldPriceList from "../../price-old-price/__list/price-old-price__list";
 
 import "./list__seller.scss";
 
@@ -11,10 +12,7 @@ const ListSeller = ({ seller }) => {
       <div className="list__seller">
         <div className="seller__name">{name}</div>
         <div className="seller__buy">
-          <div className="seller__prices">
-            <div className="seller__price">{`${price} руб`}</div>
-            <div className="seller__oldPrice">{`${oldPrice} руб`}</div>
-          </div>
+          <PriceOldPriceList price={price} oldPrice={oldPrice} /> 
           <ButtonOrder href={link}>Заказать с Aliepress</ButtonOrder>
         </div>
       </div>

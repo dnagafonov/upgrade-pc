@@ -13,7 +13,7 @@ const HeaderNav = () => {
   return (
     <Layout className="header__nav">
       {pages.map((e) => (
-        <Note className="header__nav-page">{e.name}</Note>
+        <Note key={e.name} className="header__nav-page">{e.name}</Note>
       ))}
     </Layout>
   );

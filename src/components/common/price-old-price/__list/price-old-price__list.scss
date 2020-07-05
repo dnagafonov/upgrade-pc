@@ -1,0 +1,17 @@
+@import "@scss/const.scss";
+
+.price-old-price__list {
+  width: 165px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+  .price {
+    color: $negative;
+  }
+
+  .oldPrice {
+    color: $d-gray;
+    text-decoration: line-through;
+  }
+}
