@@ -1,0 +1,32 @@
+@import "@scss/const.scss";
+
+.goods-build-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.goods-build-info__main {
+  width: 500px;
+  display: flex;
+  flex-flow: column wrap;
+
+  > .note {
+    margin: 20px 0 5px 0;
+    font-weight: $medium;
+  }
+
+  > .name {
+    font-size: $h2;
+    font-weight: $medium;
+    margin-bottom: 10px;
+  }
+
+  > .price-old-price {
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

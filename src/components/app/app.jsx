@@ -4,6 +4,7 @@ import HeaderLogo from "../header-logo/header-logo";
 import Good from "../good/good";
 
 import "./app.scss";
+import GoodsBuild from "../goods-build/goods-build";
 
 const App = () => {
   const g = {
@@ -15,12 +16,105 @@ const App = () => {
     oldPrice: 5500,
     description: "Графический чип: Radeon Polaris 20 XTX\nИнтерфейс шины: PCI Express 3,0 x16\nПараметры производительности\nПроцессор потока: 2304\nЧастота сердечника: 1366 ~ 1386 МГц\nЧастота памяти: 7 ~ 7,1 ГГц\nТип памяти: GDDR5\nХарактеристики памяти: 4 Гб 256 бит\nВыходной интерфейс: HDMI + DPx3 + DVI\nНаивысшее Разрешение: 4096x2160\nМаксимальная потребляемая мощность: 145 вт\nДругие параметры\nDirectX: 12\nOpenGL: 4,5\nCrossFire: Поддержка\nHDCP: Поддержка\nРадиатор: двойная Бесшумная нагревательная трубка вентилятора\nВнешний разъем питания: 8pin\nРекомендуемый Источник питания: 500 Вт",
   }
+  const g2 = {
+    id: 1,
+    img: "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg",
+    name: "Cборочка рикардо",
+    price: 144002,
+    oldPrice: 155000,
+    href: "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg",
+    description: "Графический чип: Radeon Polaris 20 XTX\nИнтерфейс шины: PCI Express 3,0 x16\nПараметры производительности\nПроцессор потока: 2304\nЧастота сердечника: 1366 ~ 1386 МГц\nЧастота памяти: 7 ~ 7,1 ГГц\nТип памяти: GDDR5\nХарактеристики памяти: 4 Гб 256 бит\nВыходной интерфейс: HDMI + DPx3 + DVI\nНаивысшее Разрешение: 4096x2160\nМаксимальная потребляемая мощность: 145 вт\nДругие параметры\nDirectX: 12\nOpenGL: 4,5\nCrossFire: Поддержка\nHDCP: Поддержка\nРадиатор: двойная Бесшумная нагревательная трубка вентилятора\nВнешний разъем питания: 8pin\nРекомендуемый Источник питания: 500 Вт",
+    lists: [
+      {
+        id: 1,
+        img:
+          "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg",
+        name: "XEON E5-2650",
+        bestSeller: {
+          name:
+            "Б/у XFX RX 580 8GB 2304 256bit GDDR5 Настольные ПК игровые видеокарты видеокарта не горная 580 8G",
+          link:
+            "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg",
+          price: 1640,
+          oldPrice: 2640,
+        },
+        sellers: [
+          {
+            name:
+              "Б/у XFX RX 580 8GB 2304 256bit GDDR5 Настольные ПК игровые видеокарты видеокарта не горная 580 8G",
+            link:
+              "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg",
+            price: 1640,
+            oldPrice: 2640,
+          },
+          {
+            name:
+              "Б/у XFX RX 580 8GB 2304 256bit GDDR5 Настольные ПК игровые видеокарты видеокарта не горная 580 8G",
+            link:
+              "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg  ",
+            price: 1640,
+            oldPrice: 2640,
+          },
+          {
+            name:
+              "Б/у XFX RX 580 8GB 2304 256bit GDDR5 Настольные ПК игровые видеокарты видеокарта не горная 580 8G",
+            link:
+              "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg ",
+            price: 1640,
+            oldPrice: 2640,
+          },
+        ],
+      },
+      {
+        id: 2,
+        img:
+          "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg",
+        name: "XEON E5-2640",
+        bestSeller: {
+          name:
+            "Б/у XFX RX 580 8GB 2304 256bit GDDR5 Настольные ПК игровые видеокарты видеокарта не горная 580 8G",
+          link:
+            "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg",
+          price: 1640,
+          oldPrice: 2640,
+        },
+        sellers: [
+          {
+            name:
+              "Б/у XFX RX 580 8GB 2304 256bit GDDR5 Настольные ПК игровые видеокарты видеокарта не горная 580 8G",
+            link:
+              "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg",
+            price: 1640,
+            oldPrice: 2640,
+          },
+          {
+            name:
+              "Б/у XFX RX 580 8GB 2304 256bit GDDR5 Настольные ПК игровые видеокарты видеокарта не горная 580 8G",
+            link:
+              "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg  ",
+            price: 1640,
+            oldPrice: 2640,
+          },
+          {
+            name:
+              "Б/у XFX RX 580 8GB 2304 256bit GDDR5 Настольные ПК игровые видеокарты видеокарта не горная 580 8G",
+            link:
+              "https://ae01.alicdn.com/kf/H855980b895f047dba6ae31b72b8d376cr/XFX-RX-580-8GB-2304-256bit-GDDR5.jpg ",
+            price: 1640,
+            oldPrice: 2640,
+          },
+        ],
+      },
+    ],
+  };
   return (
     <div className="app">
       <HeaderLogo />
       <Header />
-      <div className="wrapper"><pre>Комплектующие / процессоры / XFX RX 580 8GB 2304 256bit GDDR5</pre> </div>
-      <Good {...g}/>
+      <div className="wrapper">
+        <pre>Комплектующие / процессоры / XFX RX 580 8GB 2304 256bit GDDR5</pre>{" "}
+      </div>
+      <GoodsBuild {...g2} />
     </div>
   );
 };
