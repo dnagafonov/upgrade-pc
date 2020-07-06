@@ -23,28 +23,13 @@ const GoodInfo = ({ id, href, img, name, price, oldPrice, description }) => (
 );
 
 GoodInfo.proptypes = {
-  info: PropTypes.exact({
-    id: PropTypes.number.isRequired,
-    img: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-  }).isRequired,
-  lists: PropTypes.arrayOf({
-    img: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    bestSeller: PropTypes.exact({
-      name: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      oldPrice: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    }),
-    sellers: PropTypes.arrayOf({
-      name: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      oldPrice: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    }),
-  }).isRequired,
+  id: PropTypes.number.isRequired,
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  oldPrice: PropTypes.string.isRequired
 };
 
 export default GoodInfo;
