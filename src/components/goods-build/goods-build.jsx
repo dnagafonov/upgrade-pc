@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import GoodsBuildInfo from "./goods-build-info/goods-build-info";
 
 import "./goods-build.scss";
+import Note from "../common/note/note";
 
 const GoodsBuild = (props) => {
   return (
     <div className="goods-build">
       <div className="wrapper">
         <GoodsBuildInfo {...props} />
+        <Note>Характеристики:</Note>
         <pre className="pre">{props.description}</pre>
       </div>
     </div>

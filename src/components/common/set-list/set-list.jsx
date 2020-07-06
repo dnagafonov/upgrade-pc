@@ -10,8 +10,6 @@ const SetList = ({ lists }) => {
     if(activeId === id) setActiveId(null);
     else setActiveId(id);
   };
-  console.log(activeId);
-  
   return (
     <div className="set-list">
       {lists.map((e) => (

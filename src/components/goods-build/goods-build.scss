@@ -1,2 +1,8 @@
 @import '@scss/const.scss';
 
+.goods-build {
+  .wrapper > .note {
+    margin: 15px 0;
+    font-weight: $medium;
+  }
+}

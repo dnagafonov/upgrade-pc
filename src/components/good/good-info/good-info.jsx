@@ -4,6 +4,7 @@ import Image from "../../common/image/image";
 import DividerGray from "../../common/divider/_gray/divider_gray";
 import PriceOldPrice from "../../common/price-old-price/price-old-price";
 import ButtonOrderBig from "../../common/button/__order/_big/button__order_big";
+import Note from "../../common/note/note";
 
 import "./good-info.scss";
 
@@ -17,6 +18,7 @@ const GoodInfo = ({ id, href, img, name, price, oldPrice, description }) => (
         <ButtonOrderBig href={href}>Заказать с Aliexpress</ButtonOrderBig>
       </div>
       <DividerGray />
+      <Note>Характеристики:</Note>
       <pre className="pre">{description}</pre>
     </div>
   </div>
