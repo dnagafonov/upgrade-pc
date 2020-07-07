@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import GoodInfo from "./good-info/good-info";
+import Wrapper from "../../components/common/wrapper/wrapper";
 
 import "./good.scss";
 
 const Good = (props) => {
   return (
     <div className="good">
-      <div className="wrapper">
+      <Wrapper>
         <GoodInfo {...props} />
-      </div>
+      </Wrapper>
     </div>
   );
 };
@@ -23,7 +24,7 @@ Good.proptypes = {
     href: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     oldPrice: PropTypes.string.isRequired,
-  }).isRequired
+  }).isRequired,
 };
 
 export default Good;

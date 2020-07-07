@@ -1,3 +1,8 @@
+@import "@scss/const.scss";
+
 .image {
-  display: inline;
+  display: block;
+  > img {
+    border-radius: $br;
+  }
 }

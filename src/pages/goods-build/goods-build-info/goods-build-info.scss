@@ -1,16 +1,17 @@
 @import "@scss/const.scss";
 
-.good-info {
+.goods-build-info {
+  margin: 20px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  
+
   > .image {
     margin-right: 10px;
   }
 }
 
-.good-info__main {
+.goods-build-info__main {
   width: 500px;
   display: flex;
   flex-flow: column wrap;
@@ -26,7 +27,7 @@
     margin-bottom: 10px;
   }
 
-  > .buy {
+  > .price-old-price {
     margin-bottom: 10px;
     display: flex;
     flex-flow: row wrap;

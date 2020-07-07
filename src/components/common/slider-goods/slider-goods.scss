@@ -1,0 +1,15 @@
+@import "@scss/const.scss";
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.slider__header {
+  > .note {
+    margin: 0 0 10px 20px;
+    font-size: $h3;
+    font-weight: $medium;
+  }
+}

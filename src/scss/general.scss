@@ -21,11 +21,7 @@
 }
 
 .pre {
+  white-space: pre;
   font-size: $text;
   font-family: $font;
-}
-
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
 }

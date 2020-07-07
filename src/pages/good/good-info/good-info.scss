@@ -1,22 +1,23 @@
 @import "@scss/const.scss";
 
-.goods-build-info {
+.good-info {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-
+  
   > .image {
     margin-right: 10px;
   }
 }
 
-.goods-build-info__main {
+.good-info__main {
   width: 500px;
   display: flex;
   flex-flow: column wrap;
 
   > .note {
     margin: 20px 0 5px 0;
+    font-size: $h4;
     font-weight: $medium;
   }
 
@@ -26,7 +27,7 @@
     margin-bottom: 10px;
   }
 
-  > .price-old-price {
+  > .buy {
     margin-bottom: 10px;
     display: flex;
     flex-flow: row wrap;

@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Image from "../../common/image/image";
-import DividerGray from "../../common/divider/_gray/divider_gray";
-import PriceOldPrice from "../../common/price-old-price/price-old-price";
-import ButtonOrderBig from "../../common/button/__order/_big/button__order_big";
+import Image from "../../../components/common/image/image";
+import DividerGray from "../../../components/common/divider/_gray/divider_gray";
+import PriceOldPrice from "../../../components/common/price-old-price/price-old-price";
+import SetList from "../../../components/common/set-list/set-list";
 
 import "./goods-build-info.scss";
-import SetList from "../../common/set-list/set-list";
 
 const GoodsBuildInfo = ({ id, img, name, price, oldPrice, lists }) => (
   <div className="goods-build-info">
