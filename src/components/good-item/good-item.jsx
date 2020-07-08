@@ -6,7 +6,7 @@ import PriceOldPriceList from "../common/price-old-price/__list/price-old-price_
 
 import "./good-item.scss";
 
-const GoodItem = ({ img, name, price, oldPrice }) => (
+const GoodItem = ({ img, name="название", price="мало", oldPrice="много" }) => (
   <div className="good-item">
     <Image src={img} alt={name} width="260" height="260" />
     <Note>{name}</Note>

@@ -9,7 +9,7 @@ import "./slider-goods.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const SliderGoods = ({ name, items }) => {
+const SliderGoods = ({ name, items = [0,0,0,0] }) => {
   let settings = {
     infinity: false,
     lazyLoad: true,
@@ -41,7 +41,7 @@ const SliderGoods = ({ name, items }) => {
 
 SliderGoods.proptypes = {
   name: PropTypes.string.isRequired,
-  items: PropTypes.array.isRequired
+  items: PropTypes.array.isRequired,
 };
 
 export default SliderGoods;

@@ -19,7 +19,7 @@ const GoodInfo = ({ id, href, img, description="...", name="Имя товара"
       </div>
       <DividerGray />
       <Note>Характеристики:</Note>
-      <pre className="pre">{description.split(`\\n`).map(e => <>{e}<br/></>)}</pre>
+      <pre className="pre">{description.split(`\\n`).map(e => <div key={e}>{e}<br/></div>)}</pre>
     </div>
   </div>
 );

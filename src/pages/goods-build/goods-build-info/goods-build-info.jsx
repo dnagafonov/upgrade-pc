@@ -7,7 +7,7 @@ import SetList from "../../../components/common/set-list/set-list";
 
 import "./goods-build-info.scss";
 
-const GoodsBuildInfo = ({ id, img, name, price, oldPrice, lists }) => (
+const GoodsBuildInfo = ({ id, img, name="Название сборки", price="мало", oldPrice="много", lists }) => (
   <div className="goods-build-info">
     <Image src={img} alt={name} width="550" height="550" />
     <div className="goods-build-info__main">

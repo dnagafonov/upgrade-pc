@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import stub from "@images/img-loading.svg";
+import stub from "@images/img-stub.svg";
 
 import "./image.scss";
 
