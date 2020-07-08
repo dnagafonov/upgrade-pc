@@ -4,7 +4,7 @@ import List from "../list/list";
 
 import "./set-list.scss";
 
-const SetList = ({ lists }) => {
+const SetList = ({ lists=[] }) => {
   const [activeId, setActiveId] = useState(null);
   const changeActive = (id) => {
     if(activeId === id) setActiveId(null);

@@ -1,26 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Image from "../../common/image/image";
-import DividerGray from "../../common/divider/_gray/divider_gray";
-import PriceOldPrice from "../../common/price-old-price/price-old-price";
-import ButtonOrderBig from "../../common/button/__order/_big/button__order_big";
+import GoodsBuildInfo from "./goods-build-info/goods-build-info";
+import Wrapper from "../../components/common/wrapper/wrapper";
+import Slider from "../../components/common/slider-goods/slider-goods";
 
-import "./goods-build-info.scss";
-import SetList from "../../common/set-list/set-list";
+import "./goods-build.scss";
 
-const GoodsBuildInfo = ({ id, img, name, price, oldPrice, lists }) => (
-  <div className="goods-build-info">
-    <Image src={img} alt={name} width="550" height="550" />
-    <div className="goods-build-info__main">
-      <div className="name">{name}</div>
-        <PriceOldPrice price={price} oldPrice={oldPrice} />
-      <DividerGray />
-      <SetList lists={lists}/>
+const GoodsBuild = (props) => {
+  return (
+    <div className="goods-build">
+      <Wrapper>
+        <GoodsBuildInfo {...props} />
+        <Slider {...props.components} />
+        <pre className="pre">{props.description}</pre>
+      </Wrapper>
     </div>
-  </div>
-);
+  );
+};
 
-GoodsBuildInfo.proptypes = {
+GoodsBuild.proptypes = {
   id: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -44,4 +42,4 @@ GoodsBuildInfo.proptypes = {
   }).isRequired,
 };
 
-export default GoodsBuildInfo;
+export default GoodsBuild;

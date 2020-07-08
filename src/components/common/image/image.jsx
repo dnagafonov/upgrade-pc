@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import stub from "@images/img-stub.svg";
 
 import "./image.scss";
 
-const Image = ({ className = "", width, height, src, alt }) => (
+const Image = ({ className = "", width, height, src = stub, alt }) => (
   <div
     className={`${className} image`}
     style={{ width: width, height: height }}

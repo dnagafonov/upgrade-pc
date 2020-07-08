@@ -1,0 +1,12 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import "./wrapper.scss";
+
+const Wrapper = ({ children }) => <div className="wrapper">{children}</div>
+
+Wrapper.proptypes = {
+  children: PropTypes.node.isRequired
+}
+
+export default Wrapper;
