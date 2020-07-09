@@ -7,11 +7,11 @@ import "./good.scss";
 
 const Good = (props) => {
   return (
-    <div className="good">
+    <main className="good">
       <Wrapper>
         <GoodInfo {...props} />
       </Wrapper>
-    </div>
+    </main>
   );
 };
 

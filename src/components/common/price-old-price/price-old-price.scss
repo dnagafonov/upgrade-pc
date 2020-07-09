@@ -1,13 +1,13 @@
 @import "@scss/const.scss";
 
 .price-old-price {
-  min-width: 200px;
+  min-width: 150px;
   max-width: 300px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  font-size: $h3;
-
+  font-size: $h5;
+  
   .price {
     margin-right: 10px;
     color: $black;

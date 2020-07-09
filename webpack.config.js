@@ -104,6 +104,7 @@ module.exports = {
   },
   devtool: isDev ? "source-map" : "",
   devServer: {
+    historyApiFallback: true,
     port: 8080,
     hot: isDev,
   },

@@ -1,13 +1,14 @@
 .header {
   position: sticky;
   top: 0;
+  background-color: #fff;
 
   .wrapper {
-    padding: 10px;
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    z-index: 120;
   }
 }
