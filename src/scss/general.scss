@@ -25,3 +25,10 @@
   font-size: $text;
   font-family: $font;
 }
+
+.link,
+.link:active,
+.link:visited {
+  text-decoration: none;
+  color: $black;
+}

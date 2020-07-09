@@ -8,13 +8,13 @@ import "./goods-build.scss";
 
 const GoodsBuild = (props) => {
   return (
-    <div className="goods-build">
+    <main className="goods-build">
       <Wrapper>
         <GoodsBuildInfo {...props} />
         <Slider {...props.components} />
         <pre className="pre">{props.description}</pre>
       </Wrapper>
-    </div>
+    </main>
   );
 };
 

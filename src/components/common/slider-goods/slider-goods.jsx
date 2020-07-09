@@ -18,7 +18,7 @@ const SliderGoods = ({ name, items = [0,0,0,0] }) => {
     autoplay: true,
   };
   return (
-    <div className="slider">
+    <section className="slider">
       <Wrapper>
         <div className="slider__header">
           <Note>{name}</Note>
@@ -35,7 +35,7 @@ const SliderGoods = ({ name, items = [0,0,0,0] }) => {
           ))}
         </Slider>
       </Wrapper>
-    </div>
+    </section>
   );
 };
 

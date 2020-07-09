@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ButtonOrder from "../../button/__order/button__order";
-import PriceOldPriceList from "../../price-old-price/__list/price-old-price__list";
+import ButtonOrder from "../../button/_order/button_order";
+import PriceOldPriceList from "../../price-old-price/_list/price-old-price_list";
 
 import "./list__seller.scss";
 

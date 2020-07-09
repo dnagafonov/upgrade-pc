@@ -4,7 +4,7 @@ import "./header-logo.scss";
 
 const HeaderLogo = () => (
   <div className="header-logo">
-    <h2 className="h3">Беспокоят ваши зубы?</h2>
+    <h2 className="h3">upgrage pc</h2>
   </div>
 );
 

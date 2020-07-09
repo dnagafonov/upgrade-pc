@@ -6,17 +6,19 @@ import PriceOldPrice from "../../../components/common/price-old-price/price-old-
 import SetList from "../../../components/common/set-list/set-list";
 
 import "./goods-build-info.scss";
+import Note from "../../../components/common/note/note";
 
 const GoodsBuildInfo = ({ id, img, name="Название сборки", price="мало", oldPrice="много", lists }) => (
-  <div className="goods-build-info">
+  <section className="goods-build-info">
     <Image src={img} alt={name} width="550" height="550" />
-    <div className="goods-build-info__main">
+    <article className="goods-build-info__main">
       <div className="name">{name}</div>
-        <PriceOldPrice price={price} oldPrice={oldPrice} />
+      <PriceOldPrice price={price} oldPrice={oldPrice} />
       <DividerGray />
+      <Note>Купить комплектующие:</Note>
       <SetList lists={lists}/>
-    </div>
-  </div>
+    </article>
+  </section>
 );
 
 GoodsBuildInfo.proptypes = {
