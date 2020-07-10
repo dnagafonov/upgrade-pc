@@ -13,20 +13,14 @@ import FallBack from "../common/fallback/fallback";
 const NotFound = React.lazy(() => import("../../pages/not-found/not-found"));
 
 const App = () => {
-  const set = useSets("1");
-  const good = useComponents("processors/lga2011/1");
   return (
     <Router>
       <div className="app">
         <HeaderLogo />
         <Header />
         <Switch>
-
-          <Route path="/ass/1">
-            <Good {...good}/>
-          </Route>
-          <Route path="/ass/2">
-            <GoodsBuild {...set}/>
+          <Route path="/sets/:id">
+            <GoodsBuild />
           </Route>
           <Route path="*">
             <Suspense fallback={<FallBack />}><NotFound /></Suspense>

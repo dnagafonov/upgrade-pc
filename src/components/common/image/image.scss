@@ -2,7 +2,5 @@
 
 .image {
   display: block;
-  > img {
-    border-radius: $br;
-  }
+  border-radius: $br;
 }
