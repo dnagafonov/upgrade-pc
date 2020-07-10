@@ -10,7 +10,7 @@ const ButtonOrderBig = ({ className = "", children, href = "#" }) => (
   </ButtonOrder>
 );
 
-ButtonOrderBig.proptypes = {
+ButtonOrderBig.propTypes = {
   children: PropTypes.node.isRequired,
 };
 

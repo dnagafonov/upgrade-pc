@@ -15,7 +15,7 @@ const Good = (props) => {
   );
 };
 
-Good.proptypes = {
+Good.propTypes = {
   props: PropTypes.exact({
     id: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,

@@ -24,7 +24,7 @@ export const useSets = (path) => {
       .doc(path)
       .get()
       .then((res) => setState(res.data()));
-    return () => unsubscribe();
+    return () => unsubscribe;
   }, [path]);
   return state;
 };

@@ -39,7 +39,7 @@ const SliderGoods = ({ name, items = [0,0,0,0] }) => {
   );
 };
 
-SliderGoods.proptypes = {
+SliderGoods.propTypes = {
   name: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
 };

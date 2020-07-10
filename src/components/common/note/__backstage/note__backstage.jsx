@@ -7,7 +7,7 @@ const NoteBackstage = ({ children }) => (
   <p className="note__backstage">{children}</p>
 );
 
-NoteBackstage.proptypes = {
+NoteBackstage.propTypes = {
   children: PropTypes.node.isRequired,
 };
 

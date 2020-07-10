@@ -9,7 +9,7 @@ const ButtonOrder = ({ className="", children, href = "#" }) => (
   </a>
 );
 
-ButtonOrder.proptypes = {
+ButtonOrder.propTypes = {
   className: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,

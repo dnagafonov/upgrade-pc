@@ -14,7 +14,7 @@ const GoodItem = ({ img, name="название", price="мало", oldPrice="м
   </div>
 );
 
-GoodItem.proptypes = {
+GoodItem.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,

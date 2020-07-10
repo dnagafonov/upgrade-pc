@@ -7,7 +7,7 @@ const ListHeader = ({ children, id, onClick }) => (
   <div className="list__header" onClick={() => onClick(id)}>{children}</div>
 );
 
-ListHeader.proptypes = {
+ListHeader.propTypes = {
   children: PropTypes.node.isRequired,
 };
 

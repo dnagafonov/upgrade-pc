@@ -20,7 +20,7 @@ const ListSeller = ({ seller }) => {
   );
 };
 
-ListSeller.proptypes = {
+ListSeller.propTypes = {
   seller: PropTypes.exact({
     name: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,

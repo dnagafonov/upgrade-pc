@@ -1,14 +1,11 @@
-import React, { useState, useEffect, Suspense } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "../header/header";
 import HeaderLogo from "../header-logo/header-logo";
-import Good from "../../pages/good/good";
-import GoodsBuild from "../../pages/goods-build/goods-build";
-import Goods from "../../pages/goods/goods";
-import { useComponents, useSets } from "../../tools/hooks";
+import GoodsBuildContainer from "../../pages/goods-build/goods-build-container/goods-build-container";
+import FallBack from "../common/fallback/fallback";
 
 import "./app.scss";
-import FallBack from "../common/fallback/fallback";
 
 const NotFound = React.lazy(() => import("../../pages/not-found/not-found"));
 
@@ -20,10 +17,17 @@ const App = () => {
         <Header />
         <Switch>
           <Route path="/sets/:id">
-            <GoodsBuild />
+            <GoodsBuildContainer />
+          </Route>
+          <Route path="/404">
+            <Suspense fallback={<FallBack />}>
+              <NotFound />
+            </Suspense>
           </Route>
           <Route path="*">
-            <Suspense fallback={<FallBack />}><NotFound /></Suspense>
+            <Suspense fallback={<FallBack />}>
+              <NotFound />
+            </Suspense>
           </Route>
         </Switch>
       </div>

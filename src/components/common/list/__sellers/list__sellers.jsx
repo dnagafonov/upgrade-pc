@@ -14,7 +14,7 @@ const ListSellers = ({ sellers }) => (
   </div>
 );
 
-ListSellers.proptypes = {
+ListSellers.propTypes = {
   sellers: PropTypes.arrayOf({
     name: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,

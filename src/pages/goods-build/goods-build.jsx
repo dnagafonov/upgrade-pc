@@ -18,7 +18,7 @@ const GoodsBuild = (props) => {
   );
 };
 
-GoodsBuild.proptypes = {
+GoodsBuild.propTypes = {
   id: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

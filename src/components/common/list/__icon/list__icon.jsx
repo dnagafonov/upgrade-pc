@@ -9,7 +9,7 @@ const ListIcon = ({ isOpen }) => (
   </div>
 );
 
-ListIcon.proptypes = {
+ListIcon.propTypes = {
   isOpen: PropTypes.bool.isRequired
 }
 

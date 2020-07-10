@@ -21,7 +21,7 @@ const GoodsBuildInfo = ({ id, img, name="Название сборки", price="
   </section>
 );
 
-GoodsBuildInfo.proptypes = {
+GoodsBuildInfo.propTypes = {
   id: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
