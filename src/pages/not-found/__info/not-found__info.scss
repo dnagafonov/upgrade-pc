@@ -1,7 +1,25 @@
 @import "@scss/const.scss";
 
 .not-found__info {
-  min-width: 400px;
-  width: 40%;
-  overflow: hidden;
+  width: 30%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+
+  .h1 {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .not-found__info {
+    .h1 {
+      max-width: 300px;
+    }
+
+    .h5 {
+      max-width: 300px;
+    }
+  }
 }

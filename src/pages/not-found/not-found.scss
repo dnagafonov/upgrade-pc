@@ -6,9 +6,31 @@
   align-items: center;
 
   .wrapper {
-    width: 100%;
+    width: 1200px;
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .not-found {
+    .wrapper {
+      margin-top: 40px;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .not-found__info {
+      margin: 10px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .t404 {
+    display: none;
+  }
+}

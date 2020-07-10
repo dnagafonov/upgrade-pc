@@ -10,7 +10,7 @@ import "./good-info.scss";
 
 const GoodInfo = ({ id, href, img, description="...", name="Имя товара", price="цена", oldPrice="цена" }) => (
   <section className="good-info">
-    <Image src={img} alt={name} width="550" height="550" />
+    <Image src={img} alt={name} width="550" />
     <article className="good-info__main">
       <div className="name">{name}</div>
       <div className="buy">

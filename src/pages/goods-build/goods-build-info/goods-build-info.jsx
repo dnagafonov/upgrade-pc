@@ -10,7 +10,7 @@ import Note from "../../../components/common/note/note";
 
 const GoodsBuildInfo = ({ id, img, name="Название сборки", price="мало", oldPrice="много", lists }) => (
   <section className="goods-build-info">
-    <Image src={img} alt={name} width="550" height="550" />
+    <Image src={img} alt={name} width="550" />
     <article className="goods-build-info__main">
       <div className="name">{name}</div>
       <PriceOldPrice price={price} oldPrice={oldPrice} />
