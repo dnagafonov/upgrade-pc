@@ -29,7 +29,7 @@ const List = ({ className = "", id, name, img, bestSeller, sellers, isOpen, onCl
   </div>
 );
 
-List.proptypes = {
+List.propTypes = {
   img: PropTypes.string.isRequired,
   bestSeller: PropTypes.exact({
   childrensas: PropTypes.node.isRequired,

@@ -7,7 +7,7 @@ const ListContent = ({ children }) => (
   <div className="list__content">{children}</div>
 );
 
-ListContent.proptypes = {
+ListContent.propTypes = {
   children: PropTypes.node.isRequired,
 };
 

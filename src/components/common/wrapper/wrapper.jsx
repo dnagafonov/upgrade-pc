@@ -5,7 +5,7 @@ import "./wrapper.scss";
 
 const Wrapper = ({ children }) => <div className="wrapper">{children}</div>
 
-Wrapper.proptypes = {
+Wrapper.propTypes = {
   children: PropTypes.node.isRequired
 }
 

@@ -24,7 +24,7 @@ const GoodInfo = ({ id, href, img, description="...", name="Имя товара"
   </section>
 );
 
-GoodInfo.proptypes = {
+GoodInfo.propTypes = {
   id: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

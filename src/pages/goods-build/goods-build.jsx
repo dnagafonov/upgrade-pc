@@ -5,11 +5,13 @@ import Wrapper from "../../components/common/wrapper/wrapper";
 import Slider from "../../components/common/slider-goods/slider-goods";
 
 import "./goods-build.scss";
+import Paths from "../../components/paths/paths";
 
 const GoodsBuild = (props) => {
   return (
     <main className="goods-build">
       <Wrapper>
+        <Paths />
         <GoodsBuildInfo {...props} />
         <Slider {...props.components} />
         <pre className="pre">{props.description}</pre>
@@ -18,7 +20,7 @@ const GoodsBuild = (props) => {
   );
 };
 
-GoodsBuild.proptypes = {
+GoodsBuild.propTypes = {
   id: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

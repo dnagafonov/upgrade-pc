@@ -7,7 +7,7 @@ const Layout = ({ className = "", children }) => (
   <section className={`${className} layout`}>{children}</section>
 );
 
-Layout.proptypes = {
+Layout.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };

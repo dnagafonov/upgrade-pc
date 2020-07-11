@@ -7,9 +7,9 @@ const Note = ({ className = "", children }) => (
   <p className={`${className} note`}>{children}</p>
 );
 
-Note.proptypes = {
+Note.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string.isRequired
+  className: PropTypes.string
 };
 
 export default Note;

@@ -28,7 +28,7 @@ const SetList = ({ lists=[] }) => {
   );
 };
 
-SetList.proptypes = {
+SetList.propTypes = {
   lists: PropTypes.arrayOf({
     id: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,

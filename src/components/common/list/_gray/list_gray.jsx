@@ -6,7 +6,7 @@ import './list_gray.scss'
 
 const ListGray = props => <List className="list_gray" {...props} />
 
-ListGray.proptypes = {
+ListGray.propTypes = {
 
 };
 

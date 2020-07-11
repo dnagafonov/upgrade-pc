@@ -1,16 +1,13 @@
 import React from "react";
-import GoodItem from "../../../components/good-item/good-item";
-import { useRouteMatch } from "react-router";
+import GoodItemContainer from "../../../components/good-item/good-item-container/good-item-container";
 
-import "./goods__items";
+import "./goods__items.scss";
 
 const GoodsItems = ({ items = [] }) => {
-  let { path, url } = useRouteMatch();
-  console.log(2,path, url);
   return (
     <section className="goods__items">
       {items.map((e) => (
-        <GoodItem {...e} />
+        <GoodItemContainer {...e} />
       ))}
     </section>
   );

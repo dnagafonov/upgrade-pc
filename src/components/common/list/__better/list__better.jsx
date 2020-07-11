@@ -7,7 +7,7 @@ const ListBetter = ({ children }) => (
   <div className="list__better">{children}</div>
 );
 
-ListBetter.proptypes = {
+ListBetter.propTypes = {
   children: PropTypes.node.isRequired,
 };
 

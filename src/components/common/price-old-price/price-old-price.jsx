@@ -12,9 +12,9 @@ const PriceOldPrice = ({ price, oldPrice }) => {
   );
 };
 
-PriceOldPrice.proptypes = {
-  price: PropTypes.string.isRequired,
-  oldPrice: PropTypes.string.isRequired,
+PriceOldPrice.propTypes = {
+  price: PropTypes.number.isRequired,
+  oldPrice: PropTypes.number.isRequired,
 };
 
 export default PriceOldPrice;

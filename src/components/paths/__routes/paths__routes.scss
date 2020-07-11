@@ -1,0 +1,25 @@
+.paths__routes {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  .paths__route {
+    padding: 0 10px;
+  }
+
+  .paths__route:first-child {
+    padding: 0 10px 0 0;
+  }
+
+  .paths__route::before {
+    content: "/";
+    position: relative;
+    top: 0;
+    right: 10px;
+  }
+
+  .paths__route:first-child::before {
+    display: none;
+  }
+}
