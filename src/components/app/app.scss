@@ -7,4 +7,15 @@
   font-family: $font;
   font-weight: $regular;
   background-color: $white;
+
+  .paths {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .app {
+    padding: 20px;
+    box-sizing: border-box;
+  }
 }

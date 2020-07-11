@@ -6,8 +6,8 @@ import PriceOldPrice from "../common/price-old-price/price-old-price";
 
 import "./good-item.scss";
 
-const GoodItem = ({ img, name="название", price="мало", oldPrice="много", onClick, path }) => (
-  <div className="good-item">
+const GoodItem = ({ img, name, price, oldPrice, redirect }) => (
+  <div className="good-item" onClick={redirect}>
     <Image src={img} alt={name} width="260" height="260" />
     <Note>{name}</Note>
     <PriceOldPrice price={price} oldPrice={oldPrice} />
@@ -17,8 +17,9 @@ const GoodItem = ({ img, name="название", price="мало", oldPrice="м
 GoodItem.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  oldPrice: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  oldPrice: PropTypes.number.isRequired,
+  redirect: PropTypes.func.isRequired  
 };
 
 export default GoodItem;

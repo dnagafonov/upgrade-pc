@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
-import firebase from "./firebase";
+import db from "./firebase";
 
 export const useComponents = (path) => {
-  const [state, setState] = useState();
+  const [state, setState] = useState({});
   useEffect(() => {
-    const unsubscribe = firebase
-      .firestore()
-      .collection("Components")
+    db.collection("Components")
       .doc(path)
       .get()
       .then((res) => setState(res.data()));
-    return () => unsubscribe();
   }, [path]);
   return state;
 };
@@ -18,13 +15,10 @@ export const useComponents = (path) => {
 export const useSets = (path) => {
   const [state, setState] = useState();
   useEffect(() => {
-    const unsubscribe = firebase
-      .firestore()
-      .collection("sets")
+    db.collection("sets")
       .doc(path)
       .get()
       .then((res) => setState(res.data()));
-    return () => unsubscribe;
   }, [path]);
   return state;
 };

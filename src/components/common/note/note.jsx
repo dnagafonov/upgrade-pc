@@ -9,7 +9,7 @@ const Note = ({ className = "", children }) => (
 
 Note.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string.isRequired
+  className: PropTypes.string
 };
 
 export default Note;

@@ -15,7 +15,7 @@ const Image = ({ className = "", width, height, src = stub, alt }) => (
 );
 
 Image.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   width: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,

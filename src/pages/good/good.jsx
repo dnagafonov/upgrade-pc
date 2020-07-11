@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import GoodInfo from "./good-info/good-info";
 import Wrapper from "../../components/common/wrapper/wrapper";
+import Paths from "../../components/paths/paths";
 
 import "./good.scss";
 
@@ -9,6 +10,7 @@ const Good = (props) => {
   return (
     <main className="good">
       <Wrapper>
+        <Paths />
         <GoodInfo {...props} />
       </Wrapper>
     </main>
