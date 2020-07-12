@@ -7,7 +7,7 @@ const GoodsItems = ({ items = [] }) => {
   return (
     <section className="goods__items">
       {items.map((e) => (
-        <GoodItemContainer {...e} />
+        <GoodItemContainer key={e.name} {...e} />
       ))}
     </section>
   );

@@ -1,0 +1,9 @@
+.sort-goods__criterions {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  .sort-goods__criterion {
+    padding: 0 20px;
+  }
+}

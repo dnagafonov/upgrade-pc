@@ -1,0 +1,4 @@
+export const types = {
+  CHANGE_SORT_CRITERION: "CHANGE_SORT_CRITERION",
+  ERROR: "ERROR"
+}
