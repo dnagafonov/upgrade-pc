@@ -2,6 +2,7 @@
   position: sticky;
   top: 0;
   background-color: #fff;
+  z-index: 10;
 
   .wrapper {
     position: relative;
@@ -9,7 +10,6 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
   }
 }
 

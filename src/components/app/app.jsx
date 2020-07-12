@@ -2,13 +2,13 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "../header/header";
 import HeaderLogo from "../header-logo/header-logo";
-import GoodsBuildContainer from "../../pages/goods-build/goods-build-container/goods-build-container";
 import FallBack from "../common/fallback/fallback";
-import Good from "../../pages/good/good";
-import { useComponents } from "../../tools/hooks";
 
 import "./app.scss";
+import { ToastContainer } from "react-toastify";
 
+const Good = React.lazy(() => import("../../pages/good/good"));
+const GoodsBuildContainer = React.lazy(() => import("../../pages/goods-build/goods-build-container/goods-build-container"));
 const NotFound = React.lazy(() => import("../../pages/not-found/not-found"));
 const Goods = React.lazy(() => import("../../pages/goods/goods"));
 
@@ -47,6 +47,7 @@ const App = () => {
             </Suspense>
           </Route>
         </Switch>
+        <ToastContainer />
       </div>
     </Router>
   );

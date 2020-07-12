@@ -10,7 +10,7 @@ const PathsRoutes = ({ url }) => {
     <div className="paths__routes">
       {routes.map((e, i, a) => {
         const to = a.slice(0, ++i).join("/");
-        return <PathsRoute path={e} to={to} />;
+        return <PathsRoute key={e} path={e} to={to} />;
       })}
     </div>
   );

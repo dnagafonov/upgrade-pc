@@ -1,0 +1,24 @@
+@import "@scss/const.scss";
+
+.sort-goods__criterion {
+  position: relative;
+  color: $gray;
+
+  .triangle {
+    position: absolute;
+    right: 15px;
+    top: 20%;
+
+    span,
+    span::before,
+    span::after {
+      content: "▼";
+      position: absolute;
+      transform: scale(0.7);
+    }
+  }
+}
+
+.sort-goods__criterion.active {
+  color: $black;
+}
