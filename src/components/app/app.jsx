@@ -3,14 +3,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "../header/header";
 import HeaderLogo from "../header-logo/header-logo";
 import FallBack from "../common/fallback/fallback";
+import { ToastContainer } from "react-toastify";
 
 import "./app.scss";
-import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Good = React.lazy(() => import("../../pages/good/good"));
 const GoodsBuildContainer = React.lazy(() => import("../../pages/goods-build/goods-build-container/goods-build-container"));
 const NotFound = React.lazy(() => import("../../pages/not-found/not-found"));
-const Goods = React.lazy(() => import("../../pages/goods/goods"));
+const GoodsContainer = React.lazy(() => import("../../pages/goods/goods-container"));
 
 const App = () => {
   return (
@@ -25,11 +26,17 @@ const App = () => {
           <Route exact path="/sets">
             <div>sets</div>
           </Route>
-          <Route exact path="/components">
+          <Route exact path="/components/processors/lga2011">
             <Suspense fallback={<FallBack />}>
-              <Goods path="/components" />
+              <GoodsContainer path="processors" />
             </Suspense>
           </Route>
+          <Route exact path="/components/ram/ddr3">
+            <Suspense fallback={<FallBack />}>
+              <GoodsContainer path="processors" />
+            </Suspense>
+          </Route>
+          
           <Route exact path="/sets/:id">
             <GoodsBuildContainer />
           </Route>
@@ -47,7 +54,7 @@ const App = () => {
             </Suspense>
           </Route>
         </Switch>
-        <ToastContainer />
+        <ToastContainer limit={3} />
       </div>
     </Router>
   );

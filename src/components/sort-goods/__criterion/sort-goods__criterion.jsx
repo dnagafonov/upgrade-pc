@@ -12,7 +12,7 @@ const SortGoodsCriterion = ({ name, isActive, isAsc }) => (
 SortGoodsCriterion.propTypes = {
   name: PropTypes.string.isRequired,
   isActive: PropTypes.bool.isRequired,
-  isAsc: PropTypes.bool.isRequired
+  isAsc: PropTypes.bool //FIX
 }
 
 export default SortGoodsCriterion;

@@ -6,10 +6,11 @@ import { changeSortCriterion } from '../../redux/actions';
 
 import "./sort-goods.scss";
 
-const SortGoods = ({ changeSortCriterion }) => {
+const criterions = ["Цене", "Имени"];
 
+const SortGoods = ({ changeSortCriterion }) => {
   return(
-    <section className="sort-goods" onClick={() => changeSortCriterion("dasds")}>
+    <section className="sort-goods">
       <Note>Сортировать по:</Note>
       <SortGoodsCriterions criterions={["Цене", "Имени"]}/>
     </section>
