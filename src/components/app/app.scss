@@ -13,6 +13,10 @@
   }
 }
 
+.Toastify__toast {
+  border-radius: $br;
+}
+
 @media screen and (max-width: 1200px){
   .app {
     padding: 20px;

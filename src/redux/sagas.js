@@ -1,19 +1,19 @@
-import { takeEvery, call, put } from "redux-saga/effects";
+import { takeEvery, put, call } from "redux-saga/effects";
 import { types } from "./constants";
-import { changeSortCriterion, error } from "./actions";
+import { error, setGoods } from "./actions";
+import { getComponents } from "../tools/requests";
 
-export function* sortWatcher() {
-  console.log("watcher");
-  
-  yield takeEvery(types.CHANGE_SORT_CRITERION, sortWorker);
+export function* componentsWatcher() {
+  yield takeEvery(types.REQUEST_COMPONENTS, componentsWorker);
 }
 
-function* sortWorker() {
+function* componentsWorker(action) {
   try {
-    yield put(changeSortCriterion("s"));
-    yield put(error("its work"))
-  }
-  catch (e) {
-    yield put(error("Sort error"))
+    const goods = yield call(() => getComponents(action.path));
+    yield put(setGoods(goods));
+  } catch (e) {
+    console.log(e);
+
+    yield put(error("Sort error"));
   }
 }

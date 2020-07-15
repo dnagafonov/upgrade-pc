@@ -12,6 +12,13 @@
   transition: 0.1s ease-in-out;
   box-shadow: 0 10px 40px -10px rgba(0,0,0,.2);
   border-radius: $br;
+
+  .note {
+    max-height: 40px;
+    overflow: hidden;
+    width: 260px;
+    word-wrap: pre;
+  }
 }
 
 .good-item:hover {
