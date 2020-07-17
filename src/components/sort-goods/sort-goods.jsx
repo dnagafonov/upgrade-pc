@@ -1,20 +1,16 @@
-import React from 'react'
-import Note from '../common/note/note'
-import SortGoodsCriterions from './__criterions/sort-goods__criterions'
-import { connect } from 'react-redux';
-import { changeSortCriterion } from '../../redux/actions';
+import React from "react";
+import Note from "../common/note/note";
+import SortGoodsCriterions from "./__criterions/sort-goods__criterions";
 
 import "./sort-goods.scss";
 
-const criterions = ["Цене", "Имени"];
-
-const SortGoods = ({ changeSortCriterion }) => {
-  return(
+const SortGoods = () => {
+  return (
     <section className="sort-goods">
       <Note>Сортировать по:</Note>
-      <SortGoodsCriterions criterions={["Цене", "Имени"]}/>
+      <SortGoodsCriterions />
     </section>
-  )
-}
+  );
+};
 
-export default connect(null, { changeSortCriterion })(SortGoods);
+export default SortGoods;

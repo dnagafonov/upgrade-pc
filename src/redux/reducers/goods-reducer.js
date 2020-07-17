@@ -66,25 +66,31 @@ const init = {
       oldPrice: 3220,
       path: "components/processors/lga2011/1"
     },
-  ]  
+  ],
+  sortBy: {
+    name: "Цена",
+    isAsc: false,
+    active: true
+  },
+  criterions: [
+    {
+      name: "Цене",
+      isAsc: false,
+      active: true
+    },
+    {
+      name: "Имени",
+      isAsc: false,
+      active: false
+    },
+  ]
 }
 
 const goods = produce((draft, action) => {
   switch (action.type) {
-    case types.CHANGE_SORT_CRITERION:
+    case types.SET_SORT_CRITERION:
       draft.sortBy = action.sortBy;
-      return draft;
-    case types.SORT_BY_NAME_ASC:
-      draft.sortBy = action.sortBy;
-      return draft;
-    case types.SORT_BY_NAME_DESC:
-      draft.sortBy = action.sortBy;
-      return draft;
-    case types.SORT_BY_PRICE_ASC:
-      draft.sortBy = action.sortBy;
-      return draft;
-    case types.SORT_BY_PRICE_DESC:
-      draft.sortBy = action.sortBy;
+      draft.criterions = action.criterions;
       return draft;
     case types.SET_GOODS:
       draft.items = action.items;
@@ -92,6 +98,6 @@ const goods = produce((draft, action) => {
     default:
       return draft;
   }
-},{});
+}, init);
 
 export { goods };

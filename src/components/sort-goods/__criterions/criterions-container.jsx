@@ -1,12 +1,22 @@
-import React from 'react'
-import SortGoodsCriterion from '../__criterion/sort-goods__criterion'
+import React from "react";
+import SortGoodsCriterions from "./sort-goods__criterions";
+import { getSortBy, getCriterions } from "../../../redux/selectors";
+import { changeSortCriterion } from "../../../redux/actions";
+import { connect } from "react-redux";
 
 import "./sort-goods__criterions.scss";
-import SortGoodsCriterions from './sort-goods__criterions';
 
-const SortGoodsCriterionsContainer = ({ criterions }) => {
+const SortGoodsCriterionsContainer = ({ criterions, changeSortCriterion }) => {
+  const changeSort = sortBy => {
+    changeSortCriterion(criterions, sortBy);
+  };
+  console.log(criterions);
   
-  return <SortGoodsCriterions />
-}
+  return <SortGoodsCriterions onClick={changeSort} criterions={criterions} />;
+};
 
-export default SortGoodsCriterions;
+const mapState = (state) => ({
+  criterions: getCriterions(state)
+});
+
+export default connect(mapState, { changeSortCriterion })(SortGoodsCriterionsContainer);

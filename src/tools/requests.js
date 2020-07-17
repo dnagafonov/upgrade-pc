@@ -1,4 +1,5 @@
 import db from "./firebase";
+import { errorToast } from "./toasts";
 
 const getMotherOrProc = async (hardware, type) => {
   const snapshot = await db
@@ -63,6 +64,6 @@ export const getComponents = (path) => {
     case "/components/ram/serverddr3":
       return getServerRAM3();
     default:
-      throw new Error("Если видите эту ошибку, сообщите саппорту");
+      errorToast("Если видите эту ошибку, сообщите в поддержку");
   }
 };

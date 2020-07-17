@@ -16,6 +16,10 @@
       position: absolute;
       transform: scale(0.7);
     }
+
+    .tirangle-up {
+      transform: translateZ(180deg);
+    }
   }
 }
 
