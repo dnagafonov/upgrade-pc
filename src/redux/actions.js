@@ -6,6 +6,12 @@ export const changeSortCriterion = (sortBy) => ({
   sortBy,
 });
 
+export const setSortCriterion = (criterions, sortBy) => ({
+  type: types.CHANGE_SORT_CRITERION,
+  criterions,
+  sortBy,
+});
+
 export const error = (msg) => {
   errorToast(msg);
   return { type: types.ERROR };
@@ -20,3 +26,15 @@ export const setGoods = items => ({
   type: types.SET_GOODS,
   items
 });
+
+export const getGood = path => ({
+  type: types.SET_GOODS,
+  path
+});
+
+export const setGood = good => ({
+  type: types.SET_GOODS,
+  good
+});
+
+

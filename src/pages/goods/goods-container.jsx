@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import Goods from './goods'
-import { useRouteMatch } from 'react-router-dom'
+import { useRouteMatch, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { getItems } from '../../redux/selectors';
 import { requsetComponents } from '../../redux/actions';
 import FallBack from '../../components/common/fallback/fallback';
+import { compose } from 'redux';
 
 const GoodsContainer = ({ items, requsetComponents }) => {
   const { url } = useRouteMatch();
@@ -19,4 +20,7 @@ const map = state => ({
   items: getItems(state)
 })
 
-export default connect(map, { requsetComponents })(GoodsContainer);
+export default compose(
+  connect(map, { requsetComponents }),
+  withRouter
+)(GoodsContainer);

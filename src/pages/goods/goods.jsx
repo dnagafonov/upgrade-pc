@@ -10,7 +10,6 @@ const Goods = ({ items }) => {
   return (
     <main className="goods">
       <Wrapper>
-        <Paths />
         <SortGoods />
         <GoodsItems items={items} />
       </Wrapper>
