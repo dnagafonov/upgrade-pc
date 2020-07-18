@@ -7,7 +7,6 @@ import { ToastContainer } from "react-toastify";
 
 import "./app.scss";
 import 'react-toastify/dist/ReactToastify.css';
-import Paths from "../paths/paths";
 
 const GoodContainer = React.lazy(() => import("../../pages/good/good-container"));
 const GoodsBuildContainer = React.lazy(() => import("../../pages/goods-build/goods-build-container/goods-build-container"));
@@ -20,7 +19,6 @@ const App = () => {
       <div className="app">
         <HeaderLogo />
         <Header />
-        <Paths />
         <Switch>
           <Route exact path="/">
             <div>Home</div>
@@ -48,9 +46,7 @@ const App = () => {
               <GoodContainer />
             </Suspense>
           </Route>
-          <Route exact path="/sets/:id">
-            <GoodsBuildContainer />
-          </Route>
+
           <Route path="/404">
             <Suspense fallback={<FallBack />}>
               <NotFound />

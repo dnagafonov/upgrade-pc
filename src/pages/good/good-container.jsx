@@ -1,14 +1,23 @@
 import React from 'react';
-import { useParams, withRouter, useRouteMatch } from "react-router-dom";
+import { useRouteMatch } from "react-router-dom";
 import Good from "./good";
 import { useEffect } from "react";
+import { connect } from 'react-redux';
+import { getGood } from '../../redux/actions';
+import { getGoodSelector } from '../../redux/selectors';
+import FallBack from '../../components/common/fallback/fallback';
 
-const GoodContainer = (props) => {
-  const { url } = useRouteMatch()
+const GoodContainer = ({ good, getGood }) => {
+  const { url } = useRouteMatch();
   useEffect(()  => {
-        
-  }, [])
-  return <Good {...props} />;
+    getGood(url);
+  }, []);
+  if(!good) return <FallBack />
+  return <Good good={good} />;
 };
 
-export default GoodContainer;
+const mapState = state => ({
+  good: getGoodSelector(state)
+})
+
+export default connect(mapState, { getGood })(GoodContainer);

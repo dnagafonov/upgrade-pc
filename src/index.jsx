@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { rootReducer } from "./redux/reducers/root-reducer";
 import { Provider } from "react-redux";
-import { componentsWatcher } from "./redux/sagas";
+import { mainSaga } from "./redux/sagas";
 
 import "@scss/general.scss";
 import './index.css';
@@ -14,7 +14,7 @@ import './index.css';
 const saga = createSagaMiddleware();
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(saga)));
 
-saga.run(componentsWatcher);
+saga.run(mainSaga);
 
 ReactDOM.render(
   <React.StrictMode>

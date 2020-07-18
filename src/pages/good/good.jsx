@@ -2,23 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import GoodInfo from "./good-info/good-info";
 import Wrapper from "../../components/common/wrapper/wrapper";
-import Paths from "../../components/paths/paths";
 
 import "./good.scss";
+import Paths from "../../components/paths/paths";
 
-const Good = (props) => {
+const Good = ({ good }) => {
   return (
     <main className="good">
       <Wrapper>
         <Paths />
-        <GoodInfo {...props} />
+        <GoodInfo {...good} />
       </Wrapper>
     </main>
   );
 };
 
 Good.propTypes = {
-  props: PropTypes.exact({
+  good: PropTypes.exact({
     id: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
