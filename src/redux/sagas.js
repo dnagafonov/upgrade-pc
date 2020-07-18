@@ -1,8 +1,12 @@
-import { takeEvery, put, call } from "redux-saga/effects";
+import { takeEvery, put, call, all } from "redux-saga/effects";
 import { types } from "./constants";
-import { error, setGoods, setSortCriterion } from "./actions";
-import { getComponents } from "../tools/requests";
+import { error, setGoods, setSortCriterion, setGood } from "./actions";
+import { getComponents, fetchDoc } from "../tools/requests";
 import { errorToast } from "../tools/toasts";
+
+export function* mainSaga() {
+  yield all([componentsWatcher(), sortWatcher(), goodWatcher()])
+}
 
 export function* componentsWatcher() {
   yield takeEvery(types.REQUEST_COMPONENTS, componentsWorker);
@@ -21,18 +25,17 @@ function* componentsWorker(action) {
     const goods = yield call(() => getComponents(action.path));
     yield put(setGoods(goods));
   } catch {
-    errorToast("Ошибка при получении компонентов!");
-    yield put(error("Sort error"));
+    yield put(error("Ошибка при получении компонентов!"));
   }
 }
 
 function* goodWorker(action) {
   try {
-    const goods = yield call(() => getComponents(action.path));
-    yield put(setGoods(goods));
-  } catch {
-    errorToast("Ошибка при получении компонентов!");
-    yield put(error("Sort error"));
+    const good = yield call(() => fetchDoc(action.path));
+    yield put(setGood(good));
+  } catch(e) {
+    console.log(e);
+    yield put(error("Ошибка при получении компонентa!"));
   }
 }
 
@@ -45,7 +48,6 @@ function* sortWorker(action) {
     }));
     put(setSortCriterion(criterions, action.sortBy))
   } catch {
-    errorToast("Ошибка сортировки!");
-    yield put(error("Sort error"));
+    yield put(error("Ошибка сортировки!"));
   }
 }

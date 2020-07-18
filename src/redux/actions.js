@@ -28,12 +28,12 @@ export const setGoods = items => ({
 });
 
 export const getGood = path => ({
-  type: types.SET_GOODS,
+  type: types.GET_GOOD,
   path
 });
 
 export const setGood = good => ({
-  type: types.SET_GOODS,
+  type: types.SET_GOOD,
   good
 });
 

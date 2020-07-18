@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import Wrapper from "../../components/common/wrapper/wrapper";
 import GoodsItems from "./goods__items/goods__items";
-import Paths from "../../components/paths/paths";
+import SortGoods from "../../components/sort-goods/sort-goods";
+import PathsContainer from "../../components/paths/paths-container";
 
 import "./goods.scss";
-import SortGoods from "../../components/sort-goods/sort-goods";
 
 const Goods = ({ items }) => {
   return (
     <main className="goods">
       <Wrapper>
+        <PathsContainer />
         <SortGoods />
         <GoodsItems items={items} />
       </Wrapper>

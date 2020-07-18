@@ -1,14 +1,20 @@
-import React from 'react'
-import { useRouteMatch } from 'react-router-dom';
-import PathsRoutes from './__routes/paths__routes';
+import React from "react";
+import PathsRoutes from "./__routes/paths__routes";
+import Wrapper from "../common/wrapper/wrapper";
+import PropTypes from "prop-types";
 
-const Paths = () => {
-  const { url } = useRouteMatch();
-  return(
-    <section className="paths">
+import "./paths.scss";
+
+const Paths = ({ url }) => (
+  <section className="paths">
+    <Wrapper>
       <PathsRoutes url={url} />
-    </section>
-  )
+    </Wrapper>
+  </section>
+);
+
+Paths.propTypes = {
+  url: PropTypes.string.isRequired
 }
 
 export default Paths;

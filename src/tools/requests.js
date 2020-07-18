@@ -3,7 +3,7 @@ import { errorToast } from "./toasts";
 
 const getMotherOrProc = async (hardware, type) => {
   const snapshot = await db
-    .collection("Components")
+    .collection("components")
     .doc(hardware)
     .collection(type)
     .get();
@@ -12,15 +12,20 @@ const getMotherOrProc = async (hardware, type) => {
 
 const getRAM = async (type) => {
   const snapshot = await db
-    .collection("Components")
+    .collection("components")
     .doc("ram")
     .collection(type)
     .get();
   return snapshot.docs.map((doc) => doc.data());
 };
 
+export const fetchDoc = async (path) => {
+  const snapshot = await db.doc(path).get();
+  return snapshot.data()
+};
+
 export const getServerRAM3 = () => {
-  return getRAM("serverddr3");
+  return getRAM("server-ddr3");
 };
 
 export const getRAM3 = () => {
@@ -61,7 +66,7 @@ export const getComponents = (path) => {
       return getRAM3();
     case "/components/ram/ddr4":
       return getRAM4();
-    case "/components/ram/serverddr3":
+    case "/components/ram/server-ddr3":
       return getServerRAM3();
     default:
       errorToast("Если видите эту ошибку, сообщите в поддержку");
