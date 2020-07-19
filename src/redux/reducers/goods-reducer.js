@@ -6,21 +6,21 @@ const init = {
   sortBy: {
     name: "Цена",
     isAsc: false,
-    active: true
+    active: true,
   },
   criterions: [
     {
       name: "Цене",
       isAsc: false,
-      active: true
+      active: true,
     },
     {
       name: "Имени",
       isAsc: false,
-      active: false
+      active: false,
     },
   ]
-}
+};
 
 const goods = produce((draft, action) => {
   switch (action.type) {
@@ -30,6 +30,9 @@ const goods = produce((draft, action) => {
       return draft;
     case types.SET_GOODS:
       draft.items = action.items;
+      return draft;
+    case types.CLEAN_GOODS:
+      draft.items = null;
       return draft;
     default:
       return draft;

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import GoodsBuildInfo from "./goods-build-info/goods-build-info";
+import GoodsBuildInfo from "./__build-info/goods-build-info";
 import Wrapper from "../../components/common/wrapper/wrapper";
 import Slider from "../../components/common/slider-goods/slider-goods";
 

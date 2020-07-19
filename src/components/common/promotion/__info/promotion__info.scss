@@ -1,0 +1,14 @@
+@import "@scss/const.scss";
+
+.promotion__info {
+  padding: 30px;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  box-sizing: border-box;
+  word-wrap: pre;
+}

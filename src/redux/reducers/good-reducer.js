@@ -6,6 +6,9 @@ const good = produce((draft, action) => {
     case types.SET_GOOD:
       draft = action.good;
       return draft;
+    case types.CLEAN_GOOD:
+      draft = null;
+      return draft;
     default:
       return draft;
   }

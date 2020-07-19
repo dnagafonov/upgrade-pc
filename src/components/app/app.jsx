@@ -4,6 +4,8 @@ import Header from "../header/header";
 import HeaderLogo from "../header-logo/header-logo";
 import FallBack from "../common/fallback/fallback";
 import { ToastContainer } from "react-toastify";
+import Wrapper from "../common/wrapper/wrapper";
+import PromotionContainer from "../common/promotion/promotion-container";
 
 import "./app.scss";
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,7 +23,9 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path="/">
-            <div>Home</div>
+            <Wrapper>
+              <PromotionContainer />
+            </Wrapper>
           </Route>
           <Route exact path="/sets">
             <div>sets</div>

@@ -1,0 +1,12 @@
+@import "@scss/const.scss";
+
+.good__characteristics { 
+  width: inherit;
+  word-wrap: pre;
+  
+  > .note {
+    margin: 20px 0 5px 0;
+    font-size: $h4;
+    font-weight: $medium;
+  }
+}

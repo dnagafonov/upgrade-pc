@@ -11,7 +11,7 @@
 }
 
 .good-info__main {
-  width: 500px;
+  max-width: 500px;
   display: flex;
   flex-flow: column wrap;
 
@@ -29,7 +29,6 @@
   }
 
   > .buy {
-    max-width: 500px;
     margin-bottom: 10px;
     display: flex;
     flex-flow: row wrap;
@@ -38,7 +37,7 @@
   }
   
   > .pre {
-    max-width: 500px;
-    overflow: hidden;
+    width: inherit;
+    word-wrap: pre;
   }
 }
