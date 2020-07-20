@@ -4,14 +4,10 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  
-  > .image {
-    margin-right: 10px;
-  }
 }
 
 .good-info__main {
-  width: 500px;
+  max-width: 500px;
   display: flex;
   flex-flow: column wrap;
 
@@ -22,7 +18,6 @@
   }
 
   > .name {
-    max-width: 500px;
     font-size: $h2;
     font-weight: $medium;
     margin-bottom: 10px;
@@ -30,15 +25,31 @@
 
   > .buy {
     max-width: 500px;
+    min-width: 200px;
     margin-bottom: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    > .price-old-price {
+      margin: 0 20px 0 0;
+    }
   }
-  
+
   > .pre {
-    max-width: 500px;
-    overflow: hidden;
+    width: inherit;
+    word-wrap: pre;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .good-info__main {
+    > .buy {
+      flex-flow: column wrap;
+      > .price-old-price {
+        margin: 0 0 5px 0;
+      }
+    }
   }
 }

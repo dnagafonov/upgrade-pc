@@ -37,4 +37,11 @@ export const setGood = good => ({
   good
 });
 
+export const cleanGood = () => ({
+  type: types.CLEAN_GOOD
+})
+
+export const cleanGoods = () => ({
+  type: types.CLEAN_GOODS
+})
 

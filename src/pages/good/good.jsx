@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import GoodInfo from "./good-info/good-info";
+import GoodInfo from "./__info/good__info";
+import PathsContainer from "../../components/paths/paths-container";
 import Wrapper from "../../components/common/wrapper/wrapper";
 
 import "./good.scss";
-import Paths from "../../components/paths/paths";
 
 const Good = ({ good }) => {
   return (
     <main className="good">
       <Wrapper>
-        <Paths />
+        <PathsContainer />
         <GoodInfo {...good} />
       </Wrapper>
     </main>

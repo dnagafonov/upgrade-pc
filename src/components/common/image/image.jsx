@@ -4,15 +4,14 @@ import stub from "@images/img-stub.svg";
 
 import "./image.scss";
 
-const Image = ({ className = "", width, height, src = stub, alt }) => (
-  <img
-    className={`${className} image`}
-    src={src}
-    alt={alt}
-    width={width}
-    height={height}
-  />
-);
+const Image = ({ className = "", width, height, src = stub, alt }) => {
+  const style = { width: `${width}px`, height: `${height}px` };
+  return (
+    <div className={`${className} image`} style={style}>
+      <img className="img" src={src} alt={alt} />
+    </div>
+  );
+};
 
 Image.propTypes = {
   className: PropTypes.string,

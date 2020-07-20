@@ -4,9 +4,9 @@ import Image from "../../../components/common/image/image";
 import DividerGray from "../../../components/common/divider/_gray/divider_gray";
 import PriceOldPrice from "../../../components/common/price-old-price/price-old-price";
 import ButtonOrderBig from "../../../components/common/button/_order/_big/button_order_big";
-import Note from "../../../components/common/note/note";
 
-import "./good-info.scss";
+import "./good__info.scss";
+import GoodCharacteristic from "../__characteristics/good__characteristics";
 
 const GoodInfo = ({ id, href, img, description="...", name="Имя товара", price="цена", oldPrice="цена" }) => (
   <section className="good-info">
@@ -18,8 +18,7 @@ const GoodInfo = ({ id, href, img, description="...", name="Имя товара"
         <ButtonOrderBig href={href}>Заказать с Aliexpress</ButtonOrderBig>
       </div>
       <DividerGray />
-      <Note>Характеристики:</Note>
-      <pre className="pre">{description.split(`\\n`).map(e => <div key={e}>{e}<br/></div>)}</pre>
+      <GoodCharacteristic description={description} />
     </article>
   </section>
 );
