@@ -4,22 +4,22 @@ import Note from "../../../components/common/note/note";
 
 import "./good__characteristics.scss";
 
-const GoodCharacteristic = ({ description }) => (
+const GoodCharacteristics = ({ description }) => (
   <article className="good__characteristics">
     <Note>Характеристики:</Note>
-    <pre className="pre">
+    <div className="">
       {description.split(`\\n`).map((e) => (
-        <p key={e}>
+        <p className="good__characteristic" key={e}>
           {e}
           <br />
         </p>
       ))}
-    </pre>
+    </div>
   </article>
 );
 
-GoodCharacteristic.propTypes = {
+GoodCharacteristics.propTypes = {
   description: PropTypes.string.isRequired,
 };
 
-export default GoodCharacteristic;
+export default GoodCharacteristics;

@@ -8,7 +8,7 @@ import "./good-item.scss";
 
 const GoodItem = ({ img, name, price, oldPrice, redirect }) => (
   <div className="good-item" onClick={redirect}>
-    <Image src={img} alt={name} width="260" height="260" />
+    <Image src={img} alt={name} width="260" />
     <Note>{name}</Note>
     <PriceOldPrice price={price} oldPrice={oldPrice} />
   </div>
