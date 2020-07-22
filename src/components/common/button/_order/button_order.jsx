@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "../button";
 
 import "./button_order.scss";
 
 const ButtonOrder = ({ className="", children, href = "#" }) => (
-  <a className={`${className} button_order`} href={href} target="_blank" rel="noopener">
+  <Link className={`${className} button_order_big`} href={href}>
     {children}
-  </a>
+  </Link>
 );
 
 ButtonOrder.propTypes = {

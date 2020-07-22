@@ -1,0 +1,9 @@
+@import "@scss/const.scss";
+
+.button {
+  cursor: pointer;
+}
+
+.button:hover {
+  color: $c-pr;
+}

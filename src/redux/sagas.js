@@ -2,7 +2,6 @@ import { takeEvery, put, call, all } from "redux-saga/effects";
 import { types } from "./constants";
 import { error, setGoods, setSortCriterion, setGood } from "./actions";
 import { getComponents, fetchDoc } from "../tools/requests";
-import { errorToast } from "../tools/toasts";
 
 export function* mainSaga() {
   yield all([componentsWatcher(), sortWatcher(), goodWatcher()])
@@ -23,7 +22,8 @@ export function* goodWatcher() {
 function* componentsWorker(action) {
   try {
     const goods = yield call(() => getComponents(action.path));
-    yield put(setGoods(goods));
+    if(goods.length) yield put(setGoods(goods));
+    else put(error("Ошибка при получении компонентов!"));
   } catch {
     yield put(error("Ошибка при получении компонентов!"));
   }
@@ -46,6 +46,7 @@ function* sortWorker(action) {
       isAsc: e.name === action.sortBy.name ? !e.isAsc : false,
       active: e.name === action.sortBy.name,
     }));
+    console.log(criterions, action.sortBy);
     put(setSortCriterion(criterions, action.sortBy))
   } catch {
     yield put(error("Ошибка сортировки!"));

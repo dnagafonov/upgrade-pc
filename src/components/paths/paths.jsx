@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import "./paths.scss";
 
 const Paths = ({ url }) => (
-  <section className="paths">
+  <section className="paths media1220">
     <Wrapper>
       <PathsRoutes url={url} />
     </Wrapper>

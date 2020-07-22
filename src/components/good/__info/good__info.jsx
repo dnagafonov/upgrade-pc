@@ -29,8 +29,9 @@ GoodInfo.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  oldPrice: PropTypes.string.isRequired
+  price: PropTypes.number.isRequired,
+  oldPrice: PropTypes.number.isRequired,
+  path: PropTypes.string.isRequired
 };
 
 export default GoodInfo;

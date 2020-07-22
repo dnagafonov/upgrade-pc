@@ -1,14 +1,14 @@
 import React from "react";
 import Note from "../common/note/note";
-import SortGoodsCriterions from "./__criterions/sort-goods__criterions";
+import SortGoodsCriterionsContainer from "./__criterions/criterions-container";
 
 import "./sort-goods.scss";
 
 const SortGoods = () => {
   return (
-    <section className="sort-goods">
+    <section className="sort-goods media1220">
       <Note>Сортировать по:</Note>
-      <SortGoodsCriterions />
+      <SortGoodsCriterionsContainer />
     </section>
   );
 };

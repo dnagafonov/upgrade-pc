@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import { mainSaga } from "./redux/sagas";
 
 import "@scss/general.scss";
+import 'antd/dist/antd.css';
 import './index.css';
 
 const saga = createSagaMiddleware();

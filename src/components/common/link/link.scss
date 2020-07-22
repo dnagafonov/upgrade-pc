@@ -1,0 +1,13 @@
+@import "@scss/const.scss";
+
+.link,
+.link:active,
+.link:checked {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: $c-pr;
+}

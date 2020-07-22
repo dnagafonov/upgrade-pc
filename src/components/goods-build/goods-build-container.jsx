@@ -1,7 +1,7 @@
 import React from "react";
-import GoodsBuild from "../goods-build";
+import GoodsBuild from "./goods-build";
 import { useParams, Redirect } from "react-router-dom";
-import { useSets } from "../../../tools/hooks";
+import { useSets } from "../../tools/hooks";
 import PropTypes from 'prop-types'
 
 const GoodsBuildContainer = () => {
