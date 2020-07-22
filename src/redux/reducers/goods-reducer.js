@@ -25,6 +25,8 @@ const init = {
 const goods = produce((draft, action) => {
   switch (action.type) {
     case types.SET_SORT_CRITERION:
+      draft.sortBy = null;
+      draft.criterions = null;
       draft.sortBy = action.sortBy;
       draft.criterions = action.criterions;
       return draft;

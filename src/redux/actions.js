@@ -1,8 +1,9 @@
 import { types } from "./constants";
 import { errorToast } from "../tools/toasts";
 
-export const changeSortCriterion = (sortBy) => ({
+export const changeSortCriterion = (criterions, sortBy) => ({
   type: types.CHANGE_SORT_CRITERION,
+  criterions, 
   sortBy,
 });
 

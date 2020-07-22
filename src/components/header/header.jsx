@@ -1,17 +1,17 @@
 import React from "react";
-import HeaderLinks from "./__links/header__links";
 import HeaderNav from "./__nav/header__nav";
-import s from "@images/search.svg";
+import SocialLinks from "../common/social-links/social-links";
 import Wrapper from "../common/wrapper/wrapper";
+import search from "@images/search.svg";
 
 import "./header.scss";
 
 const Header = () => (
-  <header className="header">
+  <header className="header media1220">
     <Wrapper>
-      <HeaderLinks />
+      <SocialLinks />
       <HeaderNav />
-      <img src={s} alt="search" />
+      <img src={search} alt="search" />
     </Wrapper>
   </header>
 );

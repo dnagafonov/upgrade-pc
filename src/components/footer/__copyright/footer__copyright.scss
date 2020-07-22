@@ -1,0 +1,8 @@
+@import "@scss/const.scss";
+
+.footer__copyright {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  color: $l-gray;
+}

@@ -9,11 +9,12 @@ import PromotionContainer from "../common/promotion/promotion-container";
 
 import "./app.scss";
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "../footer/footer";
 
-const GoodContainer = React.lazy(() => import("../../pages/good/good-container"));
-const GoodsBuildContainer = React.lazy(() => import("../../pages/goods-build/goods-build-container/goods-build-container"));
-const NotFound = React.lazy(() => import("../../pages/not-found/not-found"));
-const GoodsContainer = React.lazy(() => import("../../pages/goods/goods-container"));
+const GoodContainer = React.lazy(() => import("../good/good-container"));
+const GoodsBuildContainer = React.lazy(() => import("../goods-build/goods-build-container"));
+const NotFound = React.lazy(() => import("../not-found/not-found"));
+const GoodsContainer = React.lazy(() => import("../goods/goods-container"));
 
 const App = () => {
   return (
@@ -30,17 +31,17 @@ const App = () => {
           <Route exact path="/sets">
             <div>sets</div>
           </Route>
-          <Route exact path="/components/processors/lga2011">
+          <Route exact strict  path="/components/processors/lga2011">
             <Suspense fallback={<FallBack />}>
               <GoodsContainer />
             </Suspense>
           </Route>
-          <Route exact path="/components/ram/ddr3">
+          <Route exact strict path="/components/ram/ddr3">
             <Suspense fallback={<FallBack />}>
               <GoodsContainer />
             </Suspense>
           </Route>
-          <Route exact path="/components/processors/lga2011/:id">
+          <Route exact strict  path="/components/processors/lga2011/:id">
             <Suspense fallback={<FallBack />}>
               <GoodContainer />
             </Suspense>
@@ -62,6 +63,7 @@ const App = () => {
             </Suspense>
           </Route>
         </Switch>
+        <Footer />
         <ToastContainer limit={3} />
       </div>
     </Router>

@@ -3,16 +3,25 @@ import PropTypes from "prop-types";
 
 import "./sort-goods__criterion.scss";
 
-const SortGoodsCriterion = ({ name, isActive, isAsc, onClick }) => (
-  <div className={`sort-goods__criterion ${isActive ? "active" : ""}`} onClick={onClick}>
-    {name}<div className={`${isAsc ? "triangle" : "tirangle-up"}`}><span></span></div>
+const SortGoodsCriterion = ({ criterion, onClick }) => (
+  <div
+    className={`sort-goods__criterion ${criterion.active ? "active" : ""}`}
+    onClick={() => onClick(criterion)}
+  >
+    {criterion.name}
+    <div className={`${criterion.isAsc ? "triangle" : "triangle tirangle-up"}`}>
+      <span></span>
+    </div>
   </div>
 );
 
 SortGoodsCriterion.propTypes = {
-  name: PropTypes.string.isRequired,
-  isActive: PropTypes.bool.isRequired,
-  isAsc: PropTypes.bool.isRequired
-}
+  criterion: PropTypes.exact({
+    name: PropTypes.string.isRequired,
+    active: PropTypes.bool.isRequired,
+    isAsc: PropTypes.bool.isRequired,
+  }),
+  onClick: PropTypes.func.isRequired
+};
 
 export default SortGoodsCriterion;

@@ -6,7 +6,7 @@ import "./not-found__image.scss";
 
 const NotFoundImage = () => (
   <article className="not-found__image">
-    <Image src={svg} width="100%" />
+    <Image src={svg} alt="404" width="100%" />
   </article>
 );
 

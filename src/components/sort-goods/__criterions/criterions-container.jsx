@@ -10,8 +10,6 @@ const SortGoodsCriterionsContainer = ({ criterions, changeSortCriterion }) => {
   const changeSort = sortBy => {
     changeSortCriterion(criterions, sortBy);
   };
-  console.log(criterions);
-  
   return <SortGoodsCriterions onClick={changeSort} criterions={criterions} />;
 };
 

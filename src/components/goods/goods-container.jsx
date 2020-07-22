@@ -4,7 +4,7 @@ import { useRouteMatch, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { getItems } from '../../redux/selectors';
 import { requsetComponents, cleanGoods } from '../../redux/actions';
-import FallBack from '../../components/common/fallback/fallback';
+import FallBack from '../common/fallback/fallback';
 import { compose } from 'redux';
 
 const GoodsContainer = ({ items, requsetComponents, cleanGoods }) => {

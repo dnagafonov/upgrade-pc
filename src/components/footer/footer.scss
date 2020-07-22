@@ -1,0 +1,18 @@
+@import "@scss/const.scss";
+
+.footer {
+  width: 100%;
+  min-height: 300px;
+  height: 300px;
+  .wrapper {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    .divider {
+      margin: 20px 0;
+    }
+  }
+  background-color: $snow;
+}

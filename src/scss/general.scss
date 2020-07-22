@@ -31,9 +31,10 @@
   font-weight: $bold;
 }
 
-.link,
-.link:active,
-.link:visited {
-  text-decoration: none;
-  color: $black;
+
+@media screen and (max-width: 1220px){
+  .media1220 {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
 }

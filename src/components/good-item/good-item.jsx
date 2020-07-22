@@ -17,9 +17,6 @@ const GoodItem = ({ img, name, price, oldPrice, redirect }) => (
 GoodItem.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   oldPrice: PropTypes.number.isRequired,
   redirect: PropTypes.func.isRequired  

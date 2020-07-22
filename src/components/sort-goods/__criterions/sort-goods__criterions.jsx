@@ -6,12 +6,10 @@ import "./sort-goods__criterions.scss";
 
 const SortGoodsCriterions = ({ criterions, onClick }) => (
   <div className="sort-goods__criterions">
-    {criterions && criterions.map((e) => (
+    {criterions.map((e) => (
       <SortGoodsCriterion
-        key={e}
-        name={e}
-        isAsc={e.isAsc}
-        isActive={e.active}
+        key={e.name}
+        criterion={e}
         onClick={onClick}
       />
     ))}
