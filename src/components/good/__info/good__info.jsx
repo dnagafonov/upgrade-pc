@@ -7,6 +7,7 @@ import ButtonOrderBig from "../../../components/common/button/_order/_big/button
 
 import "./good__info.scss";
 import GoodCharacteristic from "../__characteristics/good__characteristics";
+import ButtonOrder from "../../common/button/_order/button_order";
 
 const GoodInfo = ({ id, href, img, description="...", name="Имя товара", price="цена", oldPrice="цена" }) => (
   <section className="good-info">
@@ -15,7 +16,7 @@ const GoodInfo = ({ id, href, img, description="...", name="Имя товара"
       <div className="name">{name}</div>
       <div className="buy">
         <PriceOldPrice price={price} oldPrice={oldPrice} />
-        <ButtonOrderBig href={href}>Заказать с Aliexpress</ButtonOrderBig>
+        <ButtonOrder href={href}>Заказать с Aliexpress</ButtonOrder>
       </div>
       <DividerGray />
       <GoodCharacteristic description={description} />

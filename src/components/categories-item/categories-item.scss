@@ -1,0 +1,28 @@
+@import "@scss/const.scss";
+
+.categories-item {
+  position: relative;
+  z-index: 0;
+  width: 280px;
+  height: 305px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: 0.1s ease-in-out;
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,.2);
+  border-radius: $br;
+  cursor: pointer;
+  .note {
+    max-height: 40px;
+    width: 260px;
+    text-align: center;
+    overflow: hidden;
+  }
+}
+
+.good-item:hover {
+  box-shadow: 0 20px 60px -10px rgba(0,0,0,.2);
+  transform: translateY(-5px);
+}

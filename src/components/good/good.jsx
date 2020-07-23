@@ -8,7 +8,7 @@ import "./good.scss";
 
 const Good = ({ good }) => {
   return (
-    <main className="good">
+    <main className="good media1220">
       <Wrapper>
         <PathsContainer />
         <GoodInfo {...good} />

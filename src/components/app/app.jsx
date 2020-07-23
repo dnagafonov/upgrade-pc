@@ -11,6 +11,7 @@ import "./app.scss";
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "../footer/footer";
 
+const CategoriesContainer = React.lazy(() => import("../categories/categories-container"));
 const GoodContainer = React.lazy(() => import("../good/good-container"));
 const GoodsBuildContainer = React.lazy(() => import("../goods-build/goods-build-container"));
 const NotFound = React.lazy(() => import("../not-found/not-found"));
@@ -31,17 +32,37 @@ const App = () => {
           <Route exact path="/sets">
             <div>sets</div>
           </Route>
-          <Route exact strict  path="/components/processors/lga2011">
+          <Route exact path="/components">
+            <Suspense fallback={<FallBack />}>
+              <CategoriesContainer />
+            </Suspense>
+          </Route>
+          <Route exact path="/components/processors">
+            <Suspense fallback={<FallBack />}>
+              <CategoriesContainer />
+            </Suspense>
+          </Route>
+          <Route exact path="/components/motherboard">
+            <Suspense fallback={<FallBack />}>
+              <CategoriesContainer />
+            </Suspense>
+          </Route>
+          <Route exact path="/components/ram">
+            <Suspense fallback={<FallBack />}>
+              <CategoriesContainer />
+            </Suspense>
+          </Route>
+          <Route exact path="/components/processors/lga2011">
             <Suspense fallback={<FallBack />}>
               <GoodsContainer />
             </Suspense>
           </Route>
-          <Route exact strict path="/components/ram/ddr3">
+          <Route exact path="/components/ram/ddr3">
             <Suspense fallback={<FallBack />}>
               <GoodsContainer />
             </Suspense>
           </Route>
-          <Route exact strict  path="/components/processors/lga2011/:id">
+          <Route exact path="/components/processors/lga2011/:id">
             <Suspense fallback={<FallBack />}>
               <GoodContainer />
             </Suspense>
@@ -51,7 +72,6 @@ const App = () => {
               <GoodContainer />
             </Suspense>
           </Route>
-
           <Route path="/404">
             <Suspense fallback={<FallBack />}>
               <NotFound />
