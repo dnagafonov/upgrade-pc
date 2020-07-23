@@ -1,9 +1,14 @@
 @import "@scss/const.scss";
 
 .button {
+  color: $white;
+  background-color: $c-sec;
+  border: none;
+  border-radius: $br;
   cursor: pointer;
+  transition: $trans;
 }
 
 .button:hover {
-  color: $c-pr;
+  background-color: $c-pr;
 }

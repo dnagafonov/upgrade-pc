@@ -1,0 +1,14 @@
+@import "@scss/const.scss";
+
+.categories__items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-items: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+
+  .good-item {
+    margin: 10px;
+  }
+}

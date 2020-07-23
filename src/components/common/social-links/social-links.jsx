@@ -1,6 +1,7 @@
 import React from "react";
 import inst from "@images/instagram.svg";
 import vk from "@images/vk.svg";
+import telegram from "@images/telegram.svg";
 import Image from "../image/image";
 import { Space } from "antd";
 import Link from "../link/link";
@@ -16,7 +17,7 @@ const SocialLinks = () => (
       <Image className="social-link" src={vk} alt="vk" width="24" height="24" />
     </Link>
     <Link href="https://t.me/dnagafonov">
-      <Image className="social-link" src={vk} alt="vk" width="24" height="24" />
+      <Image className="social-link" src={telegram} alt="telegram" width="24" height="24" />
     </Link>
   </Space>
 );

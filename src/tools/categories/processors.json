@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Процессоры LGA2011",
+    "path": "/components/processors/lga2011",
+    "img": "https://psv4.userapi.com/c856336/u225719042/docs/d4/242178308af0/Bez1v22v11v2_Imeni-1.png?extra=_cDooNimlGIE4jauTmqRIhEngzWVCZsYZjiagsDByqTNEmYwEwFThQk1ixDNREnT8eU12PE4hdof9VEV58w-Ila5BkLO43MyOA98JArZ0VZteIfsQLuZS2iCmj7lpBxHfOjj_3Ei6Zf9PhZs6gr6XVOd"
+  },
+  {
+    "name": "Процессоры LGA2011 V3",
+    "path": "/components/processors/v3",
+    "img": "https://psv4.userapi.com/c856336/u225719042/docs/d15/41031776454d/d212d12d121dbez_Imeni-1.png?extra=sPjUyHGcXo_ybNUBH9hsSOXWO9aNsyLACkG7LoEiUMM1Q8ZOjuU3Gi2u8TBSp4Srts0NOWQ-FehPokiHDsCSkccwyOrp5NNqKl_N468WhVshHkL_2eYakuaCkI46A3sVTNfQGHkgpuaeL8hVe3lWeXfz"
+  }
+]
