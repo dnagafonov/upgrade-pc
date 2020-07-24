@@ -26,6 +26,7 @@ export function* categoriesWatcher() {
 function* categoriesWorker(action) {
   try {
     const categories = yield call(() => requestCategories(action.url));
+    console.log("c", categories);
     yield put(setCategories(categories));
   } catch(e) {
     console.log(e);

@@ -80,17 +80,17 @@ export const getComponents = (path) => {
   }
 };
 
-export const requestCategories = (url) => {
+export const requestCategories = async (url) => {
   const nurl = normalizePath(url);
   switch (nurl) {
     case "/components":
-      return sleep(components, 1000);
+      return await sleep(components, 300);
     case "/components/processors":
-      return sleep(processors, 1000);
+      return await sleep(processors, 300);
     case "/components/motherboard":
-      return sleep(motherboards, 1000);
+      return await sleep(motherboards, 300);
     case "/components/ram":
-      return sleep(ram, 1000);
+      return await sleep(ram, 300);
     default:
       errorToast("Если видите эту ошибку, сообщите в поддержку в ВК");
   }
