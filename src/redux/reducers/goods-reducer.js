@@ -5,18 +5,18 @@ const init = {
   items: null,
   sortBy: {
     name: "Цена",
-    isAsc: false,
+    isAsc: true,
     active: true,
   },
   criterions: [
     {
       name: "Цене",
-      isAsc: false,
+      isAsc: true,
       active: true,
     },
     {
       name: "Имени",
-      isAsc: false,
+      isAsc: true,
       active: false,
     },
   ]

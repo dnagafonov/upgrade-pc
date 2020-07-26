@@ -6,7 +6,12 @@ import "./categories__items.scss";
 const CategoriesItems = ({ categories }) => (
   <article className="categories__items">
     {categories.map((e) => (
-      <CategoriesItemContainer img={e.img} name={e.name} path={e.path} />
+      <CategoriesItemContainer
+        key={e.name}
+        img={e.img}
+        name={e.name}
+        path={e.path}
+      />
     ))}
   </article>
 );
