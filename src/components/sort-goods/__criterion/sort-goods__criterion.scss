@@ -3,23 +3,34 @@
 .sort-goods__criterion {
   position: relative;
   color: $gray;
+  transition: $trans;
+  cursor: pointer;
+  user-select: none;
+}
 
-  .triangle {
+.triangle {
+  position: absolute;
+  right: 15px;
+  top: 20%;
+  transition: $trans;
+  
+  span,
+  span::before {
+    content: "▼";
     position: absolute;
-    right: 15px;
-    top: 20%;
+    transform: scale(0.7);
+  }
+}
 
-    span,
-    span::before,
-    span::after {
-      content: "▼";
-      position: absolute;
-      transform: scale(0.7);
-    }
-
-    .tirangle-up {
-      transform: translateZ(180deg);
-    }
+.triangle.tirangle-up {
+  span::before {
+    display: none;
+  }
+  span::after {
+    content: "▲";
+    display: block;
+    position: absolute;
+    transform: scale(0.7);
   }
 }
 

@@ -8,7 +8,7 @@ export const changeSortCriterion = (criterions, sortBy) => ({
 });
 
 export const setSortCriterion = (criterions, sortBy) => ({
-  type: types.CHANGE_SORT_CRITERION,
+  type: types.SET_SORT_CRITERION,
   criterions,
   sortBy,
 });

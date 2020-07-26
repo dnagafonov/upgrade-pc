@@ -3,6 +3,8 @@ import Wrapper from "../common/wrapper/wrapper";
 import PathsContainer from "../paths/paths-container";
 import CategoriesItems from "./__items/categories__items";
 
+import "./categories.scss"
+
 const Categories = ({ categories }) => (
   <section className="categories">
     <Wrapper>

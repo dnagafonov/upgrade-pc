@@ -26,7 +26,6 @@ export function* categoriesWatcher() {
 function* categoriesWorker(action) {
   try {
     const categories = yield call(() => requestCategories(action.url));
-    console.log("c", categories);
     yield put(setCategories(categories));
   } catch(e) {
     console.log(e);
@@ -38,7 +37,7 @@ function* componentsWorker(action) {
   try {
     const goods = yield call(() => getComponents(action.path));
     if(goods.length) yield put(setGoods(goods));
-    else put(error("Ошибка при получении компонентов!"));
+    else put(error("Ошибка при получении   компонентов!"));
   } catch {
     yield put(error("Ошибка при получении компонентов!"));
   }
@@ -58,11 +57,10 @@ function* sortWorker(action) {
   try {
     const criterions = action.criterions.map(e => ({
       name: e.name,
-      isAsc: e.name === action.sortBy.name ? !e.isAsc : false,
+      isAsc: e.name === action.sortBy.name ? !e.isAsc : true,
       active: e.name === action.sortBy.name,
     }));
-    console.log(criterions, action.sortBy);
-    put(setSortCriterion(criterions, action.sortBy))
+    yield put(setSortCriterion(criterions, action.sortBy))
   } catch {
     yield put(error("Ошибка сортировки!"));
   }
