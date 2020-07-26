@@ -7,7 +7,7 @@ import "./footer__copyright.scss";
 const FooterCopyright = () => (
   <article className="footer__copyright">
     <Note>© Copyright, 2020</Note>
-    <Note>Created by: <Link href={"https://github.com/dnagafonov"}>dnagafonov</Link></Note>
+    <Note>Created by: <Link href={"https://t.me/dnagafonov"}>dnagafonov</Link></Note>
   </article>
 );
 

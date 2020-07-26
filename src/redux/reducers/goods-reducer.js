@@ -5,18 +5,18 @@ const init = {
   items: null,
   sortBy: {
     name: "Цена",
-    isAsc: false,
+    isAsc: true,
     active: true,
   },
   criterions: [
     {
       name: "Цене",
-      isAsc: false,
+      isAsc: true,
       active: true,
     },
     {
       name: "Имени",
-      isAsc: false,
+      isAsc: true,
       active: false,
     },
   ]
@@ -25,8 +25,6 @@ const init = {
 const goods = produce((draft, action) => {
   switch (action.type) {
     case types.SET_SORT_CRITERION:
-      draft.sortBy = null;
-      draft.criterions = null;
       draft.sortBy = action.sortBy;
       draft.criterions = action.criterions;
       return draft;

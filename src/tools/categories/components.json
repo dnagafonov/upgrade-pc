@@ -1,22 +1,22 @@
 [
   {
+    "name": "Процессоры",
+    "path": "/components/processors",
+    "img": "https://i.ibb.co/N1ZxXnF/1.png"
+  },
+  {
     "name": "Материнские платы",
     "path": "/components/motherboard",
-    "img": "https://psv4.userapi.com/c856536/u225719042/docs/d15/aeb95d8117df/2.png?extra=NCOMM43v4F4kx48XLzuQUtznY9IzuPG638JrU-ptjkuvP8joiUfJAZ4Dxc-3jbAFWFB-lJCqqAH_uFYAae-UzeGvrr-IoIEloN-zlcW4l02FjcGIcptkQFGFqYpvojRqwn4F9rfW7OyCk8SHmnHVXl9-"
+    "img": "https://i.ibb.co/WP4shXs/2.png"
   },
   {
     "name": "Видеокарты",
     "path": "/components/videocards",
-    "img": "https://psv4.userapi.com/c856536/u225719042/docs/d9/def51814b54a/3.png?extra=5GTNv1lrIv_Z2-QjwYD9N-80JExznkQK1uk9jY8JmJRqYrwt30JuBWct0jCbSmcFiR28qR-9T4jdfieUWxYGoNa7SD1X0CJwcEEXl8G4WFRB1XX1SnOvzE85_XoJzK2t1Hyh6JN9CaGhLEA5L1IcIAwa"
+    "img": "https://i.ibb.co/6RV56m2/3.png"
   },
   {
     "name": "Оперативная память",
     "path": "/components/ram",
-    "img": "https://psv4.userapi.com/c856536/u225719042/docs/d17/3b31e7f1f311/4.png?extra=pxtfOolP2xjDdDCNaWdnxmzvgm06lvVdz1D8FSmX3MwrRqU0eBxcvZDCEK9wjSR9rUq_hsI1t7-TzTbr-mKbQ04ErCPbHCzcBjpYicocqCpeNtgmt4t-6ga2kHb02ni7YBOJxCJhgBYsfXYwFyyAxmsK"
-  },
-  {
-    "name": "Процессоры",
-    "path": "/components/processors",
-    "img": "https://psv4.userapi.com/c856536/u225719042/docs/d1/1ea0045435e5/1.png?extra=XbTOxAFhOVuR9PY-OWiHyIirNukpGQEZtO8AzdxrFRKxhwe29rZ9doB15qjjkOdu2IkBgf_uPOXohOEl0Ii2mEoOxyJLL5hLDZthV9-CE17sZQZMImo-szpvHe-MwuKhRud737z_5MjJrUVSk87eKjVn"
+    "img": "https://i.ibb.co/dfKhwfH/4.png"
   }
 ]
