@@ -21,28 +21,5 @@ const GoodsBuildInfo = ({ id, img, name="Название сборки", price="
   </section>
 );
 
-GoodsBuildInfo.propTypes = {
-  id: PropTypes.number.isRequired,
-  img: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  oldPrice: PropTypes.string.isRequired,
-  lists: PropTypes.arrayOf({
-    img: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    bestSeller: PropTypes.exact({
-      name: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      oldPrice: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    }),
-    sellers: PropTypes.arrayOf({
-      name: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      oldPrice: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    }),
-  }).isRequired,
-};
 
 export default GoodsBuildInfo;

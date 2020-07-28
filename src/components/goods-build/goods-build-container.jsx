@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GoodsBuild from "./goods-build";
-import { useParams, Redirect } from "react-router-dom";
-import { useSets } from "../../tools/hooks";
-import PropTypes from 'prop-types'
+import { getGood, cleanGood } from '../../redux/actions';
+import { useRouteMatch } from "react-router-dom";
+import { connect } from "react-redux";
+import { getGoodSelector } from "../../redux/selectors";
+import FallBack from "../common/fallback/fallback";
 
-const GoodsBuildContainer = () => {
-  const { id } = useParams();
-  const set = useSets(id);
+const GoodsBuildContainer = ({ set, getGood, cleanGood }) => {
+  const { url } = useRouteMatch();
+  useEffect(()  => {
+    getGood(url);
+    return () => cleanGood();
+  }, []);
+  if(!set) return <FallBack />
   return <GoodsBuild {...set} />
 };
 
-GoodsBuildContainer.propTypes = {
+const mapState = state => ({
+  set: getGoodSelector(state)
+})
 
-}
-
-export default GoodsBuildContainer;
+export default connect(mapState, { getGood, cleanGood })(GoodsBuildContainer);

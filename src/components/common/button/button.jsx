@@ -13,8 +13,8 @@ const Button = ({ className="", id, children, onClick = stub }) => (
 
 Button.propTypes = {
   className: PropTypes.string,
-  href: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  onClick: PropTypes.func
 };
 
 export default Button;
