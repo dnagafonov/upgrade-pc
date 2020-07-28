@@ -8,12 +8,13 @@ const GoodCharacteristics = ({ description }) => (
   <article className="good__characteristics">
     <Note>Характеристики:</Note>
     <div className="">
-      {description.split(`\\n`).map((e) => (
-        <p className="good__characteristic" key={e}>
-          {e}
-          <br />
-        </p>
-      ))}
+      {description.split(`\\n`).map((e) => {
+        return (
+          <pre className="pre good__characteristic" key={e}>
+            {e}
+          </pre>
+        );
+      })}
     </div>
   </article>
 );

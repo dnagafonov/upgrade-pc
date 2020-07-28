@@ -6,20 +6,9 @@ import processors from "./categories/processors.json";
 import motherboards from "./categories/motherboards.json";
 import ram from "./categories/ram.json";
 
-const getMotherOrProc = async (hardware, type) => {
+const getCollection = async (collection) => {
   const snapshot = await db
-    .collection("components")
-    .doc(hardware)
-    .collection(type)
-    .get();
-  return snapshot.docs.map((doc) => doc.data());
-};
-
-const getRAM = async (type) => {
-  const snapshot = await db
-    .collection("components")
-    .doc("ram")
-    .collection(type)
+    .collection(collection)
     .get();
   return snapshot.docs.map((doc) => doc.data());
 };
@@ -31,31 +20,35 @@ export const fetchDoc = async (path) => {
 };
 
 export const getServerRAM3 = () => {
-  return getRAM("server-ddr3");
+  return getCollection("components/ram/server-ddr3");
 };
 
 export const getRAM3 = () => {
-  return getRAM("ddr3");
+  return getCollection("components/ram/ddr3");
 };
 
 export const getRAM4 = () => {
-  return getRAM("ddr4");
+  return getCollection("components/ram/ddr4");
 };
 
 export const getProcessorsLga2011 = () => {
-  return getMotherOrProc("processors", "lga2011");
+  return getCollection("components/processors/lga2011");
 };
 
 export const getProcessorsV3 = () => {
-  return getMotherOrProc("processors", "v3");
+  return getCollection("components/processors/v3");
 };
 
 export const getMothersLga2011 = () => {
-  return getMotherOrProc("mothers", "lga2011");
+  return getCollection("components/mothers/lga2011");
 };
 
 export const getMothersV3 = () => {
-  return getMotherOrProc("mothers", "v3");
+  return getCollection("components/mothers/v3");
+};
+
+export const getSets = () => {
+  return getCollection("sets");
 };
 
 export const getComponents = (path) => {
@@ -75,6 +68,8 @@ export const getComponents = (path) => {
       return getRAM4();
     case "/components/ram/server-ddr3":
       return getServerRAM3();
+    case "/sets":
+      return getSets();
     default:
       errorToast("Если видите эту ошибку, сообщите в поддержку в ВК");
   }

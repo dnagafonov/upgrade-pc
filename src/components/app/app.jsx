@@ -30,7 +30,14 @@ const App = () => {
             </Wrapper>
           </Route>
           <Route exact path="/sets">
-            <div>sets</div>
+            <Suspense fallback={<FallBack />}>
+              <GoodsContainer />
+            </Suspense>
+          </Route>
+          <Route exact path="/sets/:id">
+            <Suspense fallback={<FallBack />}>
+              <GoodsBuildContainer />
+            </Suspense>
           </Route>
           <Route exact path="/components">
             <Suspense fallback={<FallBack />}>
