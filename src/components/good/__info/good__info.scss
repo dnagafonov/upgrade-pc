@@ -4,6 +4,11 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+
+  > .good__image {
+    margin: 0 10px 10px 0;
+    border-radius: $br;
+  }
 }
 
 .good-info__main {
@@ -20,6 +25,7 @@
   > .name {
     font-size: $h2;
     font-weight: $medium;
+    line-height: 2rem;
     margin-bottom: 10px;
   }
 

@@ -47,8 +47,7 @@ function* goodWorker(action) {
   try {
     const good = yield call(() => fetchDoc(action.path));
     yield put(setGood(good));
-  } catch(e) {
-    console.log(e);
+  } catch {
     yield put(error("Ошибка при получении компонентa!"));
   }
 }

@@ -5,7 +5,7 @@ import Button from "../button";
 import "./button_order.scss";
 
 const ButtonOrder = ({ className="", children, href = "#" }) => (
-  <Button className={`${className} button_order_big`} href={href}>
+  <Button className={`${className} button_order`} href={href}>
     {children}
   </Button>
 );
