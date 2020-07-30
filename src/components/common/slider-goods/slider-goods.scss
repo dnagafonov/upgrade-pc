@@ -4,11 +4,19 @@
   position: relative;
   display: flex;
   flex-flow: row nowrap;
+  
+  .good-item {
+    height: 345px;
+    box-shadow: none;
+  }
+  .good-item:hover {
+    box-shadow: none;
+    transform: none;
+  }
 }
 
 .slider__header {
   > .note {
-    margin: 0 0 10px 0;
     font-size: $h3;
     font-weight: $medium;
   }

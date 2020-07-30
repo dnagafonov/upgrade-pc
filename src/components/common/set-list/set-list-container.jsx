@@ -1,29 +1,23 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import List from "../list/list";
+import SetList from "./set-list";
 
-import "./set-list.scss";
-
-const SetList = ({ lists, onClick, activeId }) => {
+const SetListContainer = ({ lists = [] }) => {
+  const [activeId, setActiveId] = useState(null);
+  const changeActive = (id) => {
+    if (activeId === id) setActiveId(null);
+    else setActiveId(id);
+  };
   return (
-    <div className="set-list">
-      {lists.map((e) => (
-        <List
-          id={e.id}
-          key={e.id}
-          name={e.name}
-          bestSeller={e.bestSeller}
-          img={e.img}
-          sellers={e.sellers}
-          isOpen={e.id === activeId}
-          onClick={onClick}
-        />
-      ))}
-    </div>
+    <SetList
+      lists={lists}
+      onClick={(id) => changeActive(id)}
+      activeId={activeId}
+    />
   );
 };
 
-SetList.propTypes = {
+SetListContainer.propTypes = {
   lists: PropTypes.arrayOf({
     id: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,
@@ -43,8 +37,6 @@ SetList.propTypes = {
     }),
     isOpen: PropTypes.bool.isRequired,
   }),
-  onClick: PropTypes.func.isRequired,
-  activeId: PropTypes.number.isRequired
 };
 
-export default SetList;
+export default SetListContainer;

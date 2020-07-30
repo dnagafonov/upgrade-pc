@@ -3,13 +3,11 @@ import PropTypes from "prop-types";
 import Image from "../../../components/common/image/image";
 import DividerGray from "../../../components/common/divider/_gray/divider_gray";
 import PriceOldPrice from "../../../components/common/price-old-price/price-old-price";
-import ButtonOrderBig from "../../../components/common/button/_order/_big/button_order_big";
-
-import "./good__info.scss";
-import GoodCharacteristic from "../__characteristics/good__characteristics";
-import ButtonOrder from "../../common/button/_order/button_order";
+import GoodCharacteristic from "../../common/good-characteristics/good-characteristics/good-characteristics";
 import Button from "../../common/button/button";
 import Link from "../../common/link/link";
+
+import "./good__info.scss";
 
 const GoodInfo = ({ id, href, img, description="...", name="Имя товара", price="цена", oldPrice="цена" }) => (
   <section className="good-info">

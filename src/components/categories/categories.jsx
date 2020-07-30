@@ -1,6 +1,6 @@
 import React from "react";
 import Wrapper from "../common/wrapper/wrapper";
-import PathsContainer from "../paths/paths-container";
+import BreadcrumbContainer from "../breadcrumb/breadcrumb-container";
 import CategoriesItems from "./__items/categories__items";
 
 import "./categories.scss"
@@ -8,7 +8,7 @@ import "./categories.scss"
 const Categories = ({ categories }) => (
   <section className="categories">
     <Wrapper>
-      <PathsContainer />
+      <BreadcrumbContainer />
       <CategoriesItems categories={categories} />
     </Wrapper>
   </section>

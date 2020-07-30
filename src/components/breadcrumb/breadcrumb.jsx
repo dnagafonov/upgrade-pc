@@ -1,0 +1,20 @@
+import React from "react";
+import BreadcrumbRoutesContainer from "./__routes/breadcrumb__routes-container";
+import Wrapper from "../common/wrapper/wrapper";
+import PropTypes from "prop-types";
+
+import "./breadcrumb.scss";
+
+const Breadcrumb = ({ url }) => (
+  <section className="breadcrumb media1220">
+    <Wrapper>
+      <BreadcrumbRoutesContainer url={url} />
+    </Wrapper>
+  </section>
+);
+
+Breadcrumb.propTypes = {
+  url: PropTypes.string.isRequired
+}
+
+export default Breadcrumb;

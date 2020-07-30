@@ -1,6 +1,6 @@
 @import "@scss/const.scss";
 
-.good__characteristics { 
+.good-characteristics { 
   width: inherit;
   word-wrap: pre;
   
@@ -10,8 +10,7 @@
     font-weight: $medium;
   }
 
-  .good__characteristic {
-    max-width: 300px;
+  .good-characteristic {
     overflow: hidden;
   }
 }

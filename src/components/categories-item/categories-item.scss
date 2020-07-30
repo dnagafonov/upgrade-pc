@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: flex-start;
   transition: 0.1s ease-in-out;
-  box-shadow: 0 10px 40px -10px rgba(35,36,100,.2);
+  box-shadow: $bsh;
   border-radius: $br;
   cursor: pointer;
   .note {
@@ -23,6 +23,6 @@
 }
 
 .categories-item:hover {
-  box-shadow: 0 20px 60px -10px rgba(35,36,100,.2);
+  box-shadow: $bsh-h;
   transform: translateY(-5px);
 }
