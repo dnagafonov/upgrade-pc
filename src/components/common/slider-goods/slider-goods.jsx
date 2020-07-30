@@ -2,21 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import Slider from "react-slick";
 import Wrapper from "../wrapper/wrapper";
-import GoodItem from "../../good-item/good-item";
+import GoodItemContainer from "../../good-item/good-item-container";
 import Note from "../note/note";
 
 import "./slider-goods.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const SliderGoods = ({ name, items = [0,0,0,0] }) => {
-  let settings = {
-    infinity: false,
-    lazyLoad: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-  };
+const SliderGoods = ({ name, items, settings }) => {
   return (
     <section className="slider">
       <Wrapper>
@@ -25,12 +18,13 @@ const SliderGoods = ({ name, items = [0,0,0,0] }) => {
         </div>
         <Slider {...settings}>
           {items.map((e, i) => (
-            <GoodItem
+            <GoodItemContainer
               key={i}
               img={e.img}
               name={e.name}
               price={e.price}
               oldPrice={e.oldPrice}
+              path={e.path}
             />
           ))}
         </Slider>
@@ -42,6 +36,7 @@ const SliderGoods = ({ name, items = [0,0,0,0] }) => {
 SliderGoods.propTypes = {
   name: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
+  settings: PropTypes.object.isRequired
 };
 
 export default SliderGoods;

@@ -4,11 +4,10 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
 
-  > .good__image {
-    margin: 0 20px 10px 0;
-    border-radius: $br;
-  }
+.good__image {
+  margin: 0 20px 10px 0;
 }
 
 .good-info__main {
@@ -25,7 +24,7 @@
   > .name {
     font-size: $h2;
     font-weight: $medium;
-    line-height: 2rem;
+    line-height: $lh;
     margin-bottom: 10px;
   }
 
@@ -40,11 +39,6 @@
     > .price-old-price {
       margin: 0 20px 0 0;
     }
-  }
-
-  > .pre {
-    width: inherit;
-    word-wrap: pre;
   }
 }
 

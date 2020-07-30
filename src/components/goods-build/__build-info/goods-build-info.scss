@@ -1,38 +1,41 @@
 @import "@scss/const.scss";
 
 .goods-build-info {
-  margin: 20px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
 
-  > .image {
-    margin-right: 10px;
-  }
+.goods-build__image {
+  margin: 0 20px 10px 0;
 }
 
 .goods-build-info__main {
-  width: 500px;
+  max-width: 500px;
   display: flex;
   flex-flow: column wrap;
 
   > .note {
     margin: 20px 0 5px 0;
+    font-size: $h4;
     font-weight: $medium;
   }
 
   > .name {
     font-size: $h2;
     font-weight: $medium;
+    line-height: $lh;
     margin-bottom: 10px;
   }
 
   > .price-old-price {
+    max-width: 200px;
     margin-bottom: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    font-size: $h3;
+    font-size: $h4;
   }
 }
+

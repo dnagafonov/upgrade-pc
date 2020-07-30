@@ -6,7 +6,7 @@ import processors from "./categories/processors.json";
 import motherboards from "./categories/motherboards.json";
 import ram from "./categories/ram.json";
 
-const getCollection = async (collection) => {
+const fetchCollection = async (collection) => {
   const snapshot = await db
     .collection(collection)
     .get();
@@ -20,35 +20,35 @@ export const fetchDoc = async (path) => {
 };
 
 export const getServerRAM3 = () => {
-  return getCollection("components/ram/server-ddr3");
+  return fetchCollection("components/ram/server-ddr3");
 };
 
 export const getRAM3 = () => {
-  return getCollection("components/ram/ddr3");
+  return fetchCollection("components/ram/ddr3");
 };
 
 export const getRAM4 = () => {
-  return getCollection("components/ram/ddr4");
+  return fetchCollection("components/ram/ddr4");
 };
 
 export const getProcessorsLga2011 = () => {
-  return getCollection("components/processors/lga2011");
+  return fetchCollection("components/processors/lga2011");
 };
 
 export const getProcessorsV3 = () => {
-  return getCollection("components/processors/v3");
+  return fetchCollection("components/processors/v3");
 };
 
 export const getMothersLga2011 = () => {
-  return getCollection("components/mothers/lga2011");
+  return fetchCollection("components/mothers/lga2011");
 };
 
 export const getMothersV3 = () => {
-  return getCollection("components/mothers/v3");
+  return fetchCollection("components/mothers/v3");
 };
 
 export const getSets = () => {
-  return getCollection("sets");
+  return fetchCollection("sets");
 };
 
 export const getComponents = (path) => {

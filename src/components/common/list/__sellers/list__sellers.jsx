@@ -4,10 +4,11 @@ import ListSeller from "../__seller/list__seller";
 import DividerGray from "../../divider/_gray/divider_gray";
 
 import "./list__sellers.scss";
+import ListSellerContainer from "../__seller/list__seller-container";
 
 const ListSellers = ({ sellers }) => (
   <div className="list__sellers">
-    {sellers && sellers.map((e) => <ListSeller key={e.link} seller={e} />)}
+    {sellers && sellers.map((e) => <ListSellerContainer key={e.link} seller={e} />)}
     <DividerGray />
   </div>
 );

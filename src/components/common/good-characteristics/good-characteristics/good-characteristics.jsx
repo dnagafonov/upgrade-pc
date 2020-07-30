@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Note from "../../../components/common/note/note";
+import Note from "../../note/note";
 
-import "./good__characteristics.scss";
+import "./good-characteristics.scss";
 
 const GoodCharacteristics = ({ description }) => (
-  <article className="good__characteristics">
+  <article className="good-characteristics">
     <Note>Характеристики:</Note>
     <div className="">
       {description.split(`\\n`).map((e) => {
         return (
-          <pre className="pre good__characteristic" key={e}>
+          <pre className="pre good-characteristic" key={e}>
             {e}
           </pre>
         );

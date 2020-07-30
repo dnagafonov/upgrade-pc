@@ -7,9 +7,10 @@
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  
+
   .seller__name {
     padding-right: 10px;
+    line-height: $lh-t;
     box-sizing: border-box;
     word-wrap: pre;
   }

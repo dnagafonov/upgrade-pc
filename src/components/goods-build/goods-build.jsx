@@ -2,19 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import GoodsBuildInfo from "./__build-info/goods-build-info";
 import Wrapper from "../../components/common/wrapper/wrapper";
-import Slider from "../../components/common/slider-goods/slider-goods";
+import SliderGoodsContaner from "../common/slider-goods/slider-goods-container";
 import PathsContainer from "../paths/paths-container";
+import GoodCharacteristics from "../common/good-characteristics/good-characteristics/good-characteristics";
 
 import "./goods-build.scss";
 
 const GoodsBuild = (props) => {
   return (
-    <main className="goods-build">
+    <main className="goods-build media1220">
       <Wrapper>
         <PathsContainer />
         <GoodsBuildInfo {...props} />
-        <Slider {...props.components} />
-        <pre className="pre">{props.description}</pre>
+        <SliderGoodsContaner {...props.components} />
+        <GoodCharacteristics description={props.description} />
       </Wrapper>
     </main>
   );
