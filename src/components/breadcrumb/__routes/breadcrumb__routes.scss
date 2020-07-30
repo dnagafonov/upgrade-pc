@@ -1,0 +1,15 @@
+@import "@scss/const.scss";
+
+.breadcrumb__routes > span:last-child a{
+  cursor: default;
+  color: $black;
+}
+
+.breadcrumb__routes a,
+.breadcrumb__routes span {
+  color: $black;
+}
+
+.breadcrumb__routes a:hover {
+  color: $c-pr;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import GoodInfo from "./__info/good__info";
-import PathsContainer from "../../components/paths/paths-container";
+import BreadcrumbContainer from "../../components/breadcrumb/breadcrumb-container";
 import Wrapper from "../../components/common/wrapper/wrapper";
 
 import "./good.scss";
@@ -10,7 +10,7 @@ const Good = ({ good }) => {
   return (
     <main className="good media1220">
       <Wrapper>
-        <PathsContainer />
+        <BreadcrumbContainer />
         <GoodInfo {...good} />
       </Wrapper>
     </main>
