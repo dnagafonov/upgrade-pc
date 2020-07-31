@@ -1,15 +1,20 @@
 @import "@scss/const.scss";
 
-.breadcrumb__routes > span:last-child a{
-  cursor: default;
-  color: $black;
-}
+.breadcrumb__routes {
+  display: inline-flex;
+  flex-flow: row wrap;
 
-.breadcrumb__routes a,
-.breadcrumb__routes span {
-  color: $black;
-}
+  > span:last-child a{
+    cursor: default;
+    color: $black;
+  }
 
-.breadcrumb__routes a:hover {
-  color: $c-pr;
+  a,
+  span {
+    color: $black;
+  }
+
+  a:hover {
+    color: $c-pr;
+  }
 }

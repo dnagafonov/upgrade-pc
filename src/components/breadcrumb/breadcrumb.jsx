@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import "./breadcrumb.scss";
 
 const Breadcrumb = ({ url }) => (
-  <section className="breadcrumb media1220">
+  <section className="breadcrumb">
     <Wrapper>
       <BreadcrumbRoutesContainer url={url} />
     </Wrapper>

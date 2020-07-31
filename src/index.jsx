@@ -7,6 +7,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { rootReducer } from "./redux/reducers/root-reducer";
 import { Provider } from "react-redux";
 import { mainSaga } from "./redux/sagas";
+import { HelmetProvider } from 'react-helmet-async';
 
 import "@scss/general.scss";
 import 'antd/dist/antd.css';
@@ -20,7 +21,9 @@ saga.run(mainSaga);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
