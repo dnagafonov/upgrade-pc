@@ -6,10 +6,10 @@ import FallBack from "../common/fallback/fallback";
 import { ToastContainer } from "react-toastify";
 import Wrapper from "../common/wrapper/wrapper";
 import PromotionContainer from "../common/promotion/promotion-container";
+import Footer from "../footer/footer";
 
 import "./app.scss";
 import 'react-toastify/dist/ReactToastify.css';
-import Footer from "../footer/footer";
 
 const CategoriesContainer = React.lazy(() => import("../categories/categories-container"));
 const GoodContainer = React.lazy(() => import("../good/good-container"));
