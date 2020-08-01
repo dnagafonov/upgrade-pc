@@ -7,13 +7,13 @@ import { ToastContainer } from "react-toastify";
 import Wrapper from "../common/wrapper/wrapper";
 import PromotionContainer from "../common/promotion/promotion-container";
 import Footer from "../footer/footer";
+import CategoriesPage from "../../pages/categories-page/categories-page";
 
 import "./app.scss";
 import 'react-toastify/dist/ReactToastify.css';
+import GoodPage from "../../pages/good-page/good-page";
+import GoodsPage from "../../pages/goods-page/goods-page";
 
-const CategoriesContainer = React.lazy(() => import("../categories/categories-container"));
-const GoodContainer = React.lazy(() => import("../good/good-container"));
-const GoodsBuildContainer = React.lazy(() => import("../goods-build/goods-build-container"));
 const NotFound = React.lazy(() => import("../not-found/not-found"));
 const GoodsContainer = React.lazy(() => import("../goods/goods-container"));
 
@@ -29,56 +29,9 @@ const App = () => {
               <PromotionContainer />
             </Wrapper>
           </Route>
-          <Route exact path="/sets">
-            <Suspense fallback={<FallBack />}>
-              <GoodsContainer />
-            </Suspense>
-          </Route>
-          <Route exact path="/sets/:id">
-            <Suspense fallback={<FallBack />}>
-              <GoodsBuildContainer />
-            </Suspense>
-          </Route>
-          <Route exact path="/components">
-            <Suspense fallback={<FallBack />}>
-              <CategoriesContainer />
-            </Suspense>
-          </Route>
-          <Route exact path="/components/processors">
-            <Suspense fallback={<FallBack />}>
-              <CategoriesContainer />
-            </Suspense>
-          </Route>
-          <Route exact path="/components/motherboard">
-            <Suspense fallback={<FallBack />}>
-              <CategoriesContainer />
-            </Suspense>
-          </Route>
-          <Route exact path="/components/ram">
-            <Suspense fallback={<FallBack />}>
-              <CategoriesContainer />
-            </Suspense>
-          </Route>
-          <Route exact path="/components/processors/lga2011">
-            <Suspense fallback={<FallBack />}>
-              <GoodsContainer />
-            </Suspense>
-          </Route>
-          <Route exact path="/components/ram/ddr3">
-            <Suspense fallback={<FallBack />}>
-              <GoodsContainer />
-            </Suspense>
-          </Route>
-          <Route exact path="/components/processors/lga2011/:id">
-            <Suspense fallback={<FallBack />}>
-              <GoodContainer />
-            </Suspense>
-          </Route>
-          <Route exact path="/components/ram/ddr3/:id">
-            <Suspense fallback={<FallBack />}>
-              <GoodContainer />
-            </Suspense>
-          </Route>
+          <CategoriesPage />
+          <GoodPage />
+          <GoodsPage />
           <Route path="/404">
             <Suspense fallback={<FallBack />}>
               <NotFound />
