@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Header from "../header/header";
 import HeaderLogo from "../header-logo/header-logo";
 import FallBack from "../common/fallback/fallback";
@@ -7,15 +7,12 @@ import { ToastContainer } from "react-toastify";
 import Wrapper from "../common/wrapper/wrapper";
 import PromotionContainer from "../common/promotion/promotion-container";
 import Footer from "../footer/footer";
-import CategoriesPage from "../../pages/categories-page/categories-page";
 
+import "react-toastify/dist/ReactToastify.css";
 import "./app.scss";
-import 'react-toastify/dist/ReactToastify.css';
-import GoodPage from "../../pages/good-page/good-page";
-import GoodsPage from "../../pages/goods-page/goods-page";
 
 const NotFound = React.lazy(() => import("../not-found/not-found"));
-const GoodsContainer = React.lazy(() => import("../goods/goods-container"));
+const PagesRoutes = React.lazy(() => import("../../pages/pages-routes"));
 
 const App = () => {
   return (
@@ -23,31 +20,21 @@ const App = () => {
       <div className="app">
         <HeaderLogo />
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Wrapper>
-              <PromotionContainer />
-            </Wrapper>
-          </Route>
-          <CategoriesPage />
-          <GoodPage />
-          <GoodsPage />
-          <Route path="/404">
-            <Suspense fallback={<FallBack />}>
-              <NotFound />
-            </Suspense>
-          </Route>
-          <Route path="*">
-            <Suspense fallback={<FallBack />}>
-              <NotFound />
-            </Suspense>
-          </Route>
-        </Switch>
-        <Footer />
-        <ToastContainer limit={3} />
+        <Suspense fallback={<FallBack />}>
+          <Switch>
+            <Route exact path="/">
+              <Wrapper>
+                <PromotionContainer />
+              </Wrapper>
+            </Route>
+            <PagesRoutes />
+          </Switch>
+          <Footer />
+          <ToastContainer limit={3} />
+        </Suspense>
       </div>
     </Router>
   );
 };
 
-export default App;
+export default React.memo(App);
