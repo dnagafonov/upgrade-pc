@@ -11,7 +11,7 @@ import DividerGray from "../common/divider/_gray/divider_gray";
 import FooterCopyright from "./__copyright/footer__copyright";
 
 const Footer = () => (
-  <section className="footer media1220">
+  <footer className="footer media1220">
     <Wrapper>
       <Space direction="vertical" size="middle">
         <Image src={logo} alt="logo" width="100" />
@@ -21,7 +21,7 @@ const Footer = () => (
       <DividerGray />
       <FooterCopyright />
     </Wrapper>
-  </section>
+  </footer>
 );
 
 export default Footer;
