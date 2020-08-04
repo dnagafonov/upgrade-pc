@@ -1,1 +1,14 @@
 @import "@scss/const.scss";
+
+.social-links {
+  .social-link {
+    transition: $trans;
+    filter: brightness(0%);
+  }
+}
+
+.social-links {
+  .social-link:hover {
+    filter: brightness(100%);
+  }
+}

@@ -90,7 +90,6 @@ module.exports = {
   entry: ["@babel/polyfill", "./index.jsx"],
   output: {
     filename: !isDev ? "[name].[chunkhash].js" : "[name].[hash].js",
-    publicPath: '/',
     path: path.resolve(__dirname, "build"),
   },
   optimization: optimization(),

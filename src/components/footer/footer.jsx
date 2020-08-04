@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "../common/wrapper/wrapper";
 import Image from "../common/image/image";
-import logo from "@images/logo.png";
+import logo from "@images/logo.svg";
 
 import "./footer.scss";
 import SocialLinks from "../common/social-links/social-links";
