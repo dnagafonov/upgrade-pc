@@ -1,4 +1,3 @@
-import GoodItem from "./categories-item";
 import PropTypes from "prop-types";
 import withRedirectTo from "../hocs/withRedirectTo";
 import CategoriesItem from "./categories-item";

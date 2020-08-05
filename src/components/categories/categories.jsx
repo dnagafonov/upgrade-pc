@@ -6,7 +6,7 @@ import CategoriesItems from "./__items/categories__items";
 import "./categories.scss"
 
 const Categories = ({ categories }) => (
-  <section className="categories">
+  <section className="categories media1220">
     <Wrapper>
       <BreadcrumbContainer />
       <CategoriesItems categories={categories} />
