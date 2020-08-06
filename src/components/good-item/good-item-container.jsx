@@ -1,9 +1,9 @@
+import React from 'react'
 import GoodItem from "./good-item";
 import PropTypes from "prop-types";
-import withRedirectTo from "../hocs/withRedirectTo";
 
 const GoodItemContainer = ({ img, name = "название", price = "мало", oldPrice = "много", path }) => {
-  return withRedirectTo(GoodItem, path)({ img, name, price, oldPrice });
+  return <GoodItem img={img} name={name} price={price} oldPrice={oldPrice} path={path} />;
 };
 
 GoodItemContainer.propTypes = {

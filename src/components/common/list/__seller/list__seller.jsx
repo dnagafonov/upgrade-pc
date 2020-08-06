@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import ButtonOrder from "../../button/_order/button_order";
 import PriceOldPriceList from "../../price-old-price/_list/price-old-price_list";
-import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Button from "../../button/button";
+import Linka from "../../link/link";
 
 import "./list__seller.scss";
-import Button from "../../button/button";
-import Link from "../../link/link";
 
-const ListSeller = ({ seller, onClick }) => {
-  const { name, price, oldPrice, link } = seller;
+const ListSeller = ({ seller }) => {
+  const { name, price, oldPrice, link, path } = seller;
   return (
-    <div className="list__seller" onClick={() => onClick()}>
+    <Link className="list__seller" to={path}>
       <div className="seller__name">{name}</div>
       <div className="seller__buy">
         <PriceOldPriceList price={price} oldPrice={oldPrice} />
-        <Link href={link}>
+        <Linka href={link}>
           <Button>Заказать с Aliepress</Button>
-        </Link>
+        </Linka>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Wrapper from "../common/wrapper/wrapper";
 import GoodsItems from "./__items/goods__items";
 import SortGoods from "../sort-goods/sort-goods";
@@ -8,7 +8,7 @@ import "./goods.scss";
 
 const Goods = ({ items }) => {
   return (
-    <main className="goods">
+    <main className="goods media1220">
       <Wrapper>
         <BreadcrumbContainer />
         <SortGoods />

@@ -12,7 +12,18 @@
   transition: 0.1s ease-in-out;
   box-shadow: $bsh;
   border-radius: $br;
-  cursor: pointer;
+  
+  .button {
+    position: absolute;
+    opacity: 0%;
+    top: 245px;
+    right: 10px;
+    padding: 13px 16px 17px 16px;
+    border-radius: 50px;
+    font-size: $h5;
+    line-height: 18px;
+    transition: all $trans;
+  }
 
   .note {
     max-height: 40px;
@@ -23,6 +34,7 @@
 
   .image {
     max-height: 260px;
+    border-radius: $br;
     overflow: hidden;
   }
 
@@ -33,5 +45,9 @@
 
 .good-item:hover {
   box-shadow: $bsh-h;
-  transform: translateY(-5px);
+  transform: translateY(-2px);
+
+  .button{
+    opacity: 100%;
+  }
 }
