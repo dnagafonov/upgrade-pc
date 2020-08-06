@@ -7,7 +7,7 @@ import "./header-logo.scss";
 
 const HeaderLogo = () => (
   <div className="header-logo">
-    <Link to="/" className="link"><Image src={logo} alt="logo" /></Link>
+    <Link to="/" className="link"><Image src={logo} alt="logo" width="130" /></Link>
   </div>
 );
 

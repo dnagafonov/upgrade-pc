@@ -6,7 +6,7 @@ import "./sort-goods.scss";
 
 const SortGoods = () => {
   return (
-    <section className="sort-goods media1220">
+    <section className="sort-goods">
       <Note>Сортировать по:</Note>
       <SortGoodsCriterionsContainer />
     </section>

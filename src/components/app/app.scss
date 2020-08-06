@@ -17,6 +17,14 @@
   }
 }
 
+a {
+  color: $black;
+}
+
+a:hover {
+  color: $c-pr;
+}
+
 .Toastify__toast {
   border-radius: $br;
 }

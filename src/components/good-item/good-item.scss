@@ -22,7 +22,6 @@
     border-radius: 50px;
     font-size: $h5;
     line-height: 18px;
-    cursor: pointer;
     transition: all $trans;
   }
 
@@ -35,6 +34,7 @@
 
   .image {
     max-height: 260px;
+    border-radius: $br;
     overflow: hidden;
   }
 

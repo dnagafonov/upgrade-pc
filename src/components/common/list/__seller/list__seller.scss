@@ -20,5 +20,9 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    
+    .link {
+      text-align: center;
+    }
   }
 }
