@@ -5,10 +5,15 @@ import Note from "../common/note/note";
 import PriceOldPrice from "../common/price-old-price/price-old-price";
 
 import "./good-item.scss";
+import Button from "../common/button/button";
+import { Link } from "react-router-dom";
 
-const GoodItem = ({ img, name, price, oldPrice, redirect }) => (
-  <div className="good-item" onClick={redirect}>
+const GoodItem = ({ img, name, price, oldPrice, path }) => (
+  <div className="good-item">
     <Image src={img} alt={name} width="260" />
+    <Link to={path}>
+      <Button>→</Button>
+    </Link>
     <Note>{name}</Note>
     <PriceOldPrice price={price} oldPrice={oldPrice} />
   </div>
@@ -19,7 +24,7 @@ GoodItem.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   oldPrice: PropTypes.number.isRequired,
-  redirect: PropTypes.func.isRequired  
+  path: PropTypes.string.isRequired,
 };
 
 export default GoodItem;
