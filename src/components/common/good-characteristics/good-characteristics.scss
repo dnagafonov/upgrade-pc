@@ -2,15 +2,11 @@
 
 .good-characteristics { 
   width: inherit;
-  word-wrap: pre;
+  white-space: normal;
   
   > .note {
     margin: 20px 0 5px 0;
     font-size: $h4;
     font-weight: $medium;
-  }
-
-  .good-characteristic {
-    overflow: hidden;
   }
 }

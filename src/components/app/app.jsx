@@ -1,5 +1,5 @@
-import React, { Suspense } from "react";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import React, { Suspense, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route, Redirect, useLocation } from "react-router-dom";
 import Header from "../header/header";
 import HeaderLogo from "../header-logo/header-logo";
 import FallBack from "../common/fallback/fallback";
@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import Wrapper from "../common/wrapper/wrapper";
 import PromotionContainer from "../common/promotion/promotion-container";
 import Footer from "../footer/footer";
+import ScrollToTop from "../common/scroll-to-top/scroll-to-top";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./app.scss";
@@ -20,8 +21,8 @@ const NotFound = React.lazy(() => import("../not-found/not-found"));
 //FIX
 const App = () => {
   return (
-    <Router>
-      <div className="app">
+    <div className="app">
+      <Router>
         <HeaderLogo />
         <Header />
         <Suspense fallback={<FallBack />}>
@@ -29,8 +30,8 @@ const App = () => {
             {p2.map(({ component, paths }) =>
               paths.map((path) => (
                 <Route exact path={path} component={component} key={path} />
-              ))).flat()
-            }
+                ))).flat()
+              }
             <Route exact path="/">
               <Wrapper>
                 <PromotionContainer />
@@ -41,10 +42,11 @@ const App = () => {
             </Route>
           </Switch>
           <Footer />
+          <ScrollToTop />
           <ToastContainer limit={3} />
         </Suspense>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 };
 

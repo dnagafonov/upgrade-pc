@@ -4,7 +4,7 @@ import GoodsBuildInfo from "./__build-info/goods-build-info";
 import Wrapper from "../../components/common/wrapper/wrapper";
 import SliderGoodsContaner from "../common/slider-goods/slider-goods-container";
 import BreadcrumbContainer from "../breadcrumb/breadcrumb-container";
-import GoodCharacteristics from "../common/good-characteristics/good-characteristics/good-characteristics";
+import GoodCharacteristics from "../common/good-characteristics/good-characteristics";
 
 import "./goods-build.scss";
 

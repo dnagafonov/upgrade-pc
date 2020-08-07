@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Note from "../../note/note";
+import Note from "../note/note";
 
 import "./good-characteristics.scss";
 
@@ -10,9 +10,9 @@ const GoodCharacteristics = ({ description }) => (
     <div className="">
       {description.split(`\\n`).map((e) => {
         return (
-          <pre className="pre good-characteristic" key={e}>
+          <div className="pre good-characteristic" key={e}>
             {e}
-          </pre>
+          </div>
         );
       })}
     </div>
