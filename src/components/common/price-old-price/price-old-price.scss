@@ -10,11 +10,11 @@
   
   .price {
     margin-right: 10px;
-    color: $black;
+    color: $negative
   }
 
   .oldPrice {
-    color: $d-gray;
+    color: $gray;
     text-decoration: line-through;
   }
 }
