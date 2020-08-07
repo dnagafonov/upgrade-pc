@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import GoodInfo from "./__info/good__info";
 import BreadcrumbContainer from "../../components/breadcrumb/breadcrumb-container";
 import Wrapper from "../../components/common/wrapper/wrapper";
+import { Helmet } from "react-helmet-async";
 
 import "./good.scss";
 
@@ -10,6 +11,9 @@ const Good = ({ good }) => {
   return (
     <main className="good media1220">
       <Wrapper>
+        <Helmet>
+          <title>{good.name}</title>
+        </Helmet>
         <BreadcrumbContainer />
         <GoodInfo {...good} />
       </Wrapper>

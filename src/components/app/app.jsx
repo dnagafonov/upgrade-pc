@@ -33,9 +33,11 @@ const App = () => {
                 ))).flat()
               }
             <Route exact path="/">
-              <Wrapper>
-                <PromotionContainer />
-              </Wrapper>
+              <div className="home media1220">
+                <Wrapper>
+                  <PromotionContainer />
+                </Wrapper>
+              </div>
             </Route>
             <Route path="*">
               <NotFound />

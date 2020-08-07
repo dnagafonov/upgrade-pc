@@ -7,8 +7,23 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
   color: #fff;
   box-sizing: border-box;
-  white-space: pre;
+  white-space: pre-wrap;
+  
+  .promotion__header {
+    line-height: $lh;
+  }
+
+  .promotion__text {
+    margin: 10px 0;
+    line-height: $lh-t;
+  }
+
+  .promotion__button {
+    align-self: start;
+    .button {
+      padding: 8px 20px;
+    }
+  }
 }

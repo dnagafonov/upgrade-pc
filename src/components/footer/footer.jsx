@@ -19,7 +19,7 @@ const Footer = () => (
           <Image src={logo} alt="logo" width="130" />
         </Link>
         <SocialLinks />
-        <Note>2eblana@gmail.com</Note>
+        <Note>support@upgradepc.ru</Note>
       </Space>
       <DividerGray />
       <FooterCopyright />
