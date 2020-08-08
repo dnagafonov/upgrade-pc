@@ -1,4 +1,4 @@
-@import '@scss/const.scss';
+@import "@scss/const.scss";
 
 .h1 {
   font-size: $h1;
@@ -33,10 +33,27 @@
   font-weight: $bold;
 }
 
+.ant-drawer-header {
+  padding: 10px 20px;
+}
 
-@media screen and (max-width: 1220px){
+.ant-modal-confirm-warning .ant-modal-confirm-body > .anticon {
+  color: #FFBC2C;
+}
+
+.ant-btn-primary {
+  background-color: $c-sec;
+  border: none;
+}
+
+.ant-btn-primary:hover {
+  background-color: $c-pr;
+}
+
+@media screen and (max-width: 1220px) {
   .media1220 {
     padding: 0 20px;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 }

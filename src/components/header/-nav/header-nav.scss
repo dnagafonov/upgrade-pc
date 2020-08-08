@@ -1,12 +1,12 @@
 @import "@scss/const.scss";
 
-.header__nav {
+.header-nav {
   display: flex;
   flex-flow: row wrap;
   padding-bottom: 10px;
 }
 
-.header__nav-page {
+.header-nav-page {
   font-weight: $medium;
   padding: 10px 20px 0 10px;
 }

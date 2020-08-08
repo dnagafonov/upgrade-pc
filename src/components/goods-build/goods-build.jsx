@@ -15,6 +15,7 @@ const GoodsBuild = (props) => {
       <Wrapper>
         <Helmet>
           <title>{props.name}</title>
+          <meta name="description" content={props.description} />
         </Helmet>
         <BreadcrumbContainer />
         <GoodsBuildInfo {...props} />

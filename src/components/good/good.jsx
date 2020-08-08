@@ -13,6 +13,7 @@ const Good = ({ good }) => {
       <Wrapper>
         <Helmet>
           <title>{good.name}</title>
+          <meta name="description" content={good.description} />
         </Helmet>
         <BreadcrumbContainer />
         <GoodInfo {...good} />

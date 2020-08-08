@@ -8,7 +8,7 @@ import NotFoundImage from "./__image/not-found__image";
 import "./not-found.scss";
 
 const NotFound = () => (
-  <section className="not-found">
+  <section className="not-found media1220">
     <Wrapper>
       <NotFoundInfo />
       <NotFoundImage />

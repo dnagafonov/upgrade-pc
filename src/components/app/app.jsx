@@ -1,13 +1,14 @@
 import React, { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Redirect, useLocation } from "react-router-dom";
 import Header from "../header/header";
-import HeaderLogo from "../header-logo/header-logo";
+import HeaderLogoContainer from "../header-logo/header-logo-container";
 import FallBack from "../common/fallback/fallback";
 import { ToastContainer } from "react-toastify";
 import Wrapper from "../common/wrapper/wrapper";
 import PromotionContainer from "../common/promotion/promotion-container";
 import Footer from "../footer/footer";
 import ScrollToTop from "../common/scroll-to-top/scroll-to-top";
+import { Modal } from 'antd';
 
 import "react-toastify/dist/ReactToastify.css";
 import "./app.scss";
@@ -18,12 +19,23 @@ const GoodContainer = React.lazy(() => import( "../good/good-container"));
 const GoodsBuild = React.lazy(() => import( "../goods-build/goods-build-container"));
 const NotFound = React.lazy(() => import("../not-found/not-found"));
 
+const config = {
+  title: 'Внимание!',
+  centered: true,
+  className: "my-modal",
+  content: <div>Сайт все еще находится в стадии активной разработки!</div>,
+};
+
 //FIX
 const App = () => {
+  const [modal, contextHolder] = Modal.useModal();
+  useEffect(() => {
+    modal.warning(config);
+  }, [])
   return (
     <div className="app">
       <Router>
-        <HeaderLogo />
+        <HeaderLogoContainer />
         <Header />
         <Suspense fallback={<FallBack />}>
           <Switch>
@@ -43,6 +55,7 @@ const App = () => {
               <NotFound />
             </Route>
           </Switch>
+          {contextHolder}
           <Footer />
           <ScrollToTop />
           <ToastContainer limit={3} />
