@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderNav from "./__nav/header__nav";
+import HeaderNav from "./-nav/header-nav";
 import SocialLinks from "../common/social-links/social-links";
 import Wrapper from "../common/wrapper/wrapper";
 

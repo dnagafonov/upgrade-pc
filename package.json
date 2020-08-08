@@ -52,6 +52,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
     "@babel/polyfill": "^7.10.4",
     "antd": "^4.4.3",
     "firebase": "^7.15.5",

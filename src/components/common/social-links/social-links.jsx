@@ -10,10 +10,10 @@ import "./social-links.scss";
 
 const SocialLinks = () => (
   <Space className="social-links" direction="horizontal" size={10}>
-    <Link href="https://www.instagram.com/v.margo.v/">
+    <Link href="https://www.instagram.com/dnagafonov">
       <Image className="social-link" src={inst} alt="insta" width="24" height="24" />
     </Link>
-    <Link href="https://vk.com/im">
+    <Link href="https://vk.com/dnagafonov">
       <Image className="social-link" src={vk} alt="vk" width="24" height="24" />
     </Link>
     <Link href="https://t.me/dnagafonov">

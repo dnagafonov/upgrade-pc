@@ -14,7 +14,6 @@ const GoodsContainer = ({ items, requsetComponents, cleanGoods }) => {
     return () => cleanGoods();
   }, [url])
   if(!items) return <FallBack />
-  console.log(items);
   return <Goods items={items} />
 }
 

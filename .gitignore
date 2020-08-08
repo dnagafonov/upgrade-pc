@@ -1,2 +1,3 @@
 node_modules
 src/tools/firebase.js
+src/public/.htaccess

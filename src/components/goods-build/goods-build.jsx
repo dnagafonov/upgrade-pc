@@ -5,6 +5,7 @@ import Wrapper from "../../components/common/wrapper/wrapper";
 import SliderGoodsContaner from "../common/slider-goods/slider-goods-container";
 import BreadcrumbContainer from "../breadcrumb/breadcrumb-container";
 import GoodCharacteristics from "../common/good-characteristics/good-characteristics";
+import { Helmet } from "react-helmet-async";
 
 import "./goods-build.scss";
 
@@ -12,6 +13,10 @@ const GoodsBuild = (props) => {
   return (
     <main className="goods-build media1220">
       <Wrapper>
+        <Helmet>
+          <title>{props.name}</title>
+          <meta name="description" content={props.description} />
+        </Helmet>
         <BreadcrumbContainer />
         <GoodsBuildInfo {...props} />
         <SliderGoodsContaner {...props.components} />
