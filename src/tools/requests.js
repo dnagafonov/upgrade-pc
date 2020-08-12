@@ -7,9 +7,7 @@ import motherboards from "./categories/motherboards.json";
 import ram from "./categories/ram.json";
 
 const fetchCollection = async (collection) => {
-  const snapshot = await db
-    .collection(collection)
-    .get();
+  const snapshot = await db.collection(collection).get();
   return snapshot.docs.map((doc) => doc.data());
 };
 
@@ -47,6 +45,10 @@ export const getMothersV3 = () => {
   return fetchCollection("components/mothers/v3");
 };
 
+export const getVideocards = () => {
+  return fetchCollection("/components/videocards/all");
+};
+
 export const getSets = () => {
   return fetchCollection("sets");
 };
@@ -68,6 +70,8 @@ export const getComponents = (path) => {
       return getRAM4();
     case "/components/ram/server-ddr3":
       return getServerRAM3();
+    case "/components/videocards/all":
+      return getVideocards();
     case "/sets":
       return getSets();
     default:
