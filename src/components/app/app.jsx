@@ -1,26 +1,29 @@
 import React, { Suspense, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Redirect, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import Header from "../header/header";
 import HeaderLogoContainer from "../header-logo/header-logo-container";
 import FallBack from "../common/fallback/fallback";
 import { ToastContainer } from "react-toastify";
-import Wrapper from "../common/wrapper/wrapper";
-import PromotionContainer from "../common/promotion/promotion-container";
 import Footer from "../footer/footer";
 import ScrollToTop from "../common/scroll-to-top/scroll-to-top";
-import { Modal } from 'antd';
+import { Modal } from "antd";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./app.scss";
 
-const CategoriesContainer = React.lazy(() => import( "../categories/categories-container"));
-const GoodsContainer = React.lazy(() => import( "../goods/goods-container"));
-const GoodContainer = React.lazy(() => import( "../good/good-container"));
-const GoodsBuild = React.lazy(() => import( "../goods-build/goods-build-container"));
+const CategoriesContainer = React.lazy(() => import("../categories/categories-container"));
+const GoodsContainer = React.lazy(() => import("../goods/goods-container"));
+const GoodContainer = React.lazy(() => import("../good/good-container"));
+const GoodsBuild = React.lazy(() => import("../goods-build/goods-build-container"));
 const NotFound = React.lazy(() => import("../not-found/not-found"));
+const Home = React.lazy(() => import("../home/home"));
 
 const config = {
-  title: 'Внимание!',
+  title: "Внимание!",
   centered: true,
   className: "my-modal",
   content: <div>Сайт все еще находится в стадии активной разработки!</div>,
@@ -31,7 +34,7 @@ const App = () => {
   const [modal, contextHolder] = Modal.useModal();
   useEffect(() => {
     modal.warning(config);
-  }, [])
+  }, []);
   return (
     <div className="app">
       <Router>
@@ -39,17 +42,15 @@ const App = () => {
         <Header />
         <Suspense fallback={<FallBack />}>
           <Switch>
-            {p2.map(({ component, paths }) =>
-              paths.map((path) => (
-                <Route exact path={path} component={component} key={path} />
-                ))).flat()
-              }
+            {p2
+              .map(({ component, paths }) =>
+                paths.map((path) => (
+                  <Route exact path={path} component={component} key={path} />
+                ))
+              )
+              .flat()}
             <Route exact path="/">
-              <div className="home media1220">
-                <Wrapper>
-                  <PromotionContainer />
-                </Wrapper>
-              </div>
+              <Home />
             </Route>
             <Route path="*">
               <NotFound />
@@ -77,7 +78,11 @@ const p2 = [
   },
   {
     component: GoodContainer,
-    paths: ["/components/processors/lga2011/:id", "/components/ram/ddr3/:id"],
+    paths: [
+      "/components/processors/lga2011/:id",
+      "/components/ram/ddr3/:id",
+      "/components/videocards/all/:id",
+    ],
   },
   {
     component: GoodsBuild,
@@ -85,7 +90,12 @@ const p2 = [
   },
   {
     component: GoodsContainer,
-    paths: ["/sets", "/components/ram/ddr3", "/components/processors/lga2011"],
+    paths: [
+      "/sets",
+      "/components/ram/ddr3",
+      "/components/processors/lga2011",
+      "/components/videocards/all",
+    ],
   },
   {
     component: NotFound,
