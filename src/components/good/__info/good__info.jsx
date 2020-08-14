@@ -9,7 +9,7 @@ import Link from "../../common/link/link";
 
 import "./good__info.scss";
 
-const GoodInfo = ({ id, href, img, description="...", name="Имя товара", price="цена", oldPrice="цена" }) => (
+const GoodInfo = ({ href, img, description, name, price, oldPrice }) => (
   <section className="good-info">
     <Image className="good__image" src={img} alt={name} width="550" />
     <article className="good-info__main">
@@ -27,13 +27,12 @@ const GoodInfo = ({ id, href, img, description="...", name="Имя товара"
 );
 
 GoodInfo.propTypes = {
-  id: PropTypes.number.isRequired,
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  oldPrice: PropTypes.number.isRequired,
+  oldPrice: PropTypes.number,
   path: PropTypes.string.isRequired
 };
 
