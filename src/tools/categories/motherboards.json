@@ -1,12 +1,12 @@
 [
   {
     "name": "Материнские платы LGA2011",
-    "path": "/components/motherboard/lga2011",
+    "path": "/components/motherboards/lga2011",
     "img": "https://i.ibb.co/bBFSVX4/Bv212v1-Imeni-1.png"
   },
   {
     "name": "Материнские платы LGA2011 V3",
-    "path": "/components/motherboard/v3",
+    "path": "/components/motherboards/v3",
     "img": "https://i.ibb.co/XZ11dmG/Bea323a2z-Imeni-1.png"
   }
 ]
