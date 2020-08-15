@@ -17,39 +17,39 @@ export const fetchDoc = async (path) => {
   return snapshot.data();
 };
 
-export const getServerRAM3 = () => {
+const getServerRAM3 = () => {
   return fetchCollection("components/ram/server-ddr3");
 };
 
-export const getRAM3 = () => {
+const getRAM3 = () => {
   return fetchCollection("components/ram/ddr3");
 };
 
-export const getRAM4 = () => {
+const getRAM4 = () => {
   return fetchCollection("components/ram/ddr4");
 };
 
-export const getProcessorsLga2011 = () => {
+const getProcessorsLga2011 = () => {
   return fetchCollection("components/processors/lga2011");
 };
 
-export const getProcessorsV3 = () => {
+const getProcessorsV3 = () => {
   return fetchCollection("components/processors/v3");
 };
 
-export const getMothersLga2011 = () => {
-  return fetchCollection("components/mothers/lga2011");
+const getMothersLga2011 = () => {
+  return fetchCollection("components/motherboards/lga2011");
 };
 
-export const getMothersV3 = () => {
-  return fetchCollection("components/mothers/v3");
+const getMothersV3 = () => {
+  return fetchCollection("components/motherboards/v3");
 };
 
-export const getVideocards = () => {
+const getVideocards = () => {
   return fetchCollection("/components/videocards/all");
 };
 
-export const getSets = () => {
+const getSets = () => {
   return fetchCollection("sets");
 };
 
@@ -59,11 +59,11 @@ export const getComponents = (path) => {
     case "/components/processors/lga2011":
       return getProcessorsLga2011();
     case "/components/processors/v3":
-      return getProcessorsLga2011();
-    case "/components/motherboard/lga2011":
-      return getProcessorsLga2011();
-    case "/components/motherboard/v3":
-      return getProcessorsLga2011();
+      return getProcessorsV3();
+    case "/components/motherboards/lga2011":
+      return getMothersLga2011();
+    case "/components/motherboards/v3":
+      return getMothersV3();
     case "/components/ram/ddr3":
       return getRAM3();
     case "/components/ram/ddr4":
@@ -86,7 +86,7 @@ export const requestCategories = async (url) => {
       return await sleep(components, 300);
     case "/components/processors":
       return await sleep(processors, 300);
-    case "/components/motherboard":
+    case "/components/motherboards":
       return await sleep(motherboards, 300);
     case "/components/ram":
       return await sleep(ram, 300);
