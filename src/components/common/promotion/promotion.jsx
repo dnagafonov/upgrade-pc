@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PromotionInfo from "./__info/promotion__info";
-import AlphaContainer from "../AlphaContainer/alpha-container";
+import AlphaContainer from "../alpha-container/alpha-container";
 
 import "./promotion.scss";
 
@@ -9,7 +9,7 @@ const Promotion = ({ name, description, img, path }) => {
   const style = { backgroundImage: `url(${img})` };
   return (
     <section className="promotion" style={style}>
-      <AlphaContainer color="#595cff" alpha={0.6}>
+      <AlphaContainer>
         <PromotionInfo name={name} description={description} path={path} />
       </AlphaContainer>
     </section>

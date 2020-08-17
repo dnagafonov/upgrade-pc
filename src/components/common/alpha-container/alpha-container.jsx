@@ -3,18 +3,15 @@ import PropTypes from "prop-types";
 
 import "./alpha-container.scss";
 
-const AlphaContainer = ({ color, alpha, children }) => {
-  const style = { backgroundColor: `rgba(0, 0,0, 0.5)`}
+const AlphaContainer = ({ children }) => {
   return (
-    <div className="alpha-container" style={style}>
+    <div className="alpha-container">
       {children}
     </div>
   );
 };
 
 AlphaContainer.propTypes = {
-  color: PropTypes.string.isRequired,
-  alpha: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired
 }
 
