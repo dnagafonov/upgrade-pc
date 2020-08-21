@@ -19,12 +19,10 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(saga)
 saga.run(mainSaga);
 
 ReactDOM.render(
-  <React.StrictMode>
     <Provider store={store}>
       <HelmetProvider>
         <App />
       </HelmetProvider>
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById("root")
 );

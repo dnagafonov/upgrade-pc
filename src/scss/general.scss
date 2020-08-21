@@ -50,6 +50,14 @@
   background-color: $c-pr;
 }
 
+.ant-space-vertical {
+  width: 100%;
+}
+
+.Toastify__toast {
+  border-radius: $br;
+}
+
 @media screen and (max-width: 1220px) {
   .media1220 {
     padding: 0 15px;

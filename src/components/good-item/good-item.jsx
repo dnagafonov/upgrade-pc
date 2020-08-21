@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import Image from "../common/image/image";
 import Note from "../common/note/note";
 import PriceOldPrice from "../common/price-old-price/price-old-price";
-
-import "./good-item.scss";
 import Button from "../common/button/button";
 import { Link } from "react-router-dom";
+
+import "./good-item.scss";
 
 const GoodItem = ({ img, name, price, oldPrice, path }) => (
   <div className="good-item">
@@ -23,7 +23,7 @@ GoodItem.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  oldPrice: PropTypes.number.isRequired,
+  oldPrice: PropTypes.number,
   path: PropTypes.string.isRequired,
 };
 
