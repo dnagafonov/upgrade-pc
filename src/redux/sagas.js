@@ -37,7 +37,7 @@ function* componentsWorker(action) {
   try {
     const goods = yield call(() => getComponents(action.path));
     if(goods.length) yield put(setGoods(goods));
-    else put(error("Ошибка при получении   компонентов!"));
+    else put(error("Товары отсутствуют!"));
   } catch {
     yield put(error("Ошибка при получении компонентов!"));
   }

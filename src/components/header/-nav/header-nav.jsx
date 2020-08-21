@@ -7,9 +7,9 @@ import "./header-nav.scss";
 
 const HeaderNav = () => {
   const pages = [
-    { name: "Готовые сборки", href: "/sets" },
+    //{ name: "Готовые сборки", href: "/sets" },
     { name: "Комплектующие", href: "/components" },
-    { name: "Игровые девайсы", href: "/devices" },
+    //{ name: "Игровые девайсы", href: "/devices" },
   ];
   return (
     <Space size={20} className="header-nav">
