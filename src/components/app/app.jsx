@@ -11,6 +11,7 @@ import { ToastContainer } from "react-toastify";
 import Footer from "../footer/footer";
 import ScrollToTop from "../common/scroll-to-top/scroll-to-top";
 import { Modal } from "antd";
+import { Helmet } from "react-helmet-async";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./app.scss";
@@ -38,6 +39,12 @@ const App = () => {
   return (
     <div className="app">
       <Router>
+        <Helmet>
+          <meta name="description" content="Дешевые игровые сборки, б/у запчасти сборки, б/у  компьютер, б/у дешевый компьютер, мощные игоровые сборки, купить мощный компьютер дешево, aliexpress компьютер, aliexpress комплектующие, новые мощные сборки 2020" />
+          <meta property="og:title" content="upgrade pc" />
+          <meta property="og:type" content="product.group" />
+          <meta property="og:image" content="https://i.ibb.co/Jp49z7T/Screenshot-12.png" />
+        </Helmet>
         <HeaderLogoContainer />
         <Header />
         <Suspense fallback={<FallBack />}>

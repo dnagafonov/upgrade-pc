@@ -14,6 +14,9 @@ const Good = ({ good }) => {
         <Helmet>
           <title>{good.name}</title>
           <meta name="description" content={good.description} />
+          <meta property="og:title" content={good.name} data-react-helmet="true" />
+          <meta property="og:type" content="product" data-react-helmet="true" />
+          <meta property="og:image" content={good.img} data-react-helmet="true" />
         </Helmet>
         <BreadcrumbContainer />
         <GoodInfo {...good} />
