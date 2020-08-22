@@ -14,7 +14,7 @@ const GoodsContainer = ({ items, requsetComponents, cleanGoods }) => {
     return () => cleanGoods();
   }, [url])
   if(!items) return <FallBack />
-  return <Goods items={items} />
+  return <Goods items={items} url={url} />
 }
 
 const map = state => ({

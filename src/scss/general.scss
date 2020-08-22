@@ -33,6 +33,10 @@
   font-weight: $bold;
 }
 
+.ant-modal-content {
+  border-radius: $br;
+}
+
 .ant-drawer-header {
   padding: 15px 20px;
 }
@@ -41,9 +45,13 @@
   color: #FFBC2C;
 }
 
+.ant-btn {
+  border-radius: $br;
+  border: none;
+}
+
 .ant-btn-primary {
   background-color: $c-sec;
-  border: none;
 }
 
 .ant-btn-primary:hover {

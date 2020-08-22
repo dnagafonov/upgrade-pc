@@ -7,13 +7,18 @@ import { Helmet } from "react-helmet-async";
 
 import "./good.scss";
 
-const Good = ({ good }) => {
+const Good = ({ good, url }) => {
   return (
     <main className="good media1220">
       <Wrapper>
         <Helmet>
           <title>{good.name}</title>
           <meta name="description" content={good.description} />
+          <meta name="keywords" content={`Купить ${good.name}`} />
+          <meta property="og:title" content={good.name} />
+          <meta property="og:url" content={`https://www.upgradepc.ru${url}`} />
+          <meta property="og:type" content="product" />
+          <meta property="og:image" content={good.img} />
         </Helmet>
         <BreadcrumbContainer />
         <GoodInfo {...good} />
@@ -33,6 +38,7 @@ Good.propTypes = {
     oldPrice: PropTypes.number.isRequired,
     path: PropTypes.string.isRequired
   }).isRequired,
+  url: PropTypes.string.isRequired
 };
 
 export default Good;

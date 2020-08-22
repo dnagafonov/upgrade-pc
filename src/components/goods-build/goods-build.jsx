@@ -16,6 +16,10 @@ const GoodsBuild = (props) => {
         <Helmet>
           <title>{props.name}</title>
           <meta name="description" content={props.description} />
+          <meta property="og:title" content={props.name} />
+          <meta property="og:url" content={`https://www.upgradepc.ru${props.url}`} />
+          <meta property="og:type" content="product" />
+          <meta property="og:image" content={props.img} />
         </Helmet>
         <BreadcrumbContainer />
         <GoodsBuildInfo {...props} />

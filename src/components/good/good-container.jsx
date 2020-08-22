@@ -14,7 +14,7 @@ const GoodContainer = ({ good, getGood, cleanGood }) => {
     return () => cleanGood();
   }, []);
   if(!good) return <FallBack />
-  return <Good good={good} />;
+  return <Good good={good} url={url} />;
 };
 
 const mapState = state => ({
