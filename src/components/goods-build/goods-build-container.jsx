@@ -13,7 +13,7 @@ const GoodsBuildContainer = ({ set, getGood, cleanGood }) => {
     return () => cleanGood();
   }, []);
   if(!set) return <FallBack />
-  return <GoodsBuild {...set} />
+  return <GoodsBuild {...set} url={url} />
 };
 
 const mapState = state => ({

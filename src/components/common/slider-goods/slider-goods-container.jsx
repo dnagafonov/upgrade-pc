@@ -8,7 +8,6 @@ const SliderGoodsContaner = ({ name, items }) => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    dots: true
   };
   return (
     <SliderGoods
