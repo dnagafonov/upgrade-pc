@@ -16,7 +16,7 @@ const Good = ({ good, url }) => {
           <meta name="description" content={good.description} />
           <meta name="keywords" content={`Купить ${good.name}`} />
           <meta property="og:title" content={good.name} />
-          <meta property="og:url" content={`https://www.upgradepc.ru${url}`} />
+          <meta property="og:url" content={`https://upgradepc.ru${url}`} />
           <meta property="og:type" content="product" />
           <meta property="og:image" content={good.img} />
         </Helmet>

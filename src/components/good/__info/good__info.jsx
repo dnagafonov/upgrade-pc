@@ -13,6 +13,7 @@ const GoodInfo = ({ href, img, description, name, price, oldPrice }) => (
   <section className="good-info">
     <Image className="good__image" src={img} alt={name} width="550" />
     <article className="good-info__main">
+      <h1 className="hidden">{name}</h1>
       <div className="name">{name}</div>
       <div className="buy">
         <PriceOldPrice price={price} oldPrice={oldPrice} />
