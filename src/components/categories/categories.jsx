@@ -11,6 +11,7 @@ const Categories = ({ categories }) => (
       <BreadcrumbContainer />
       <CategoriesItems categories={categories} />
     </Wrapper>
+    <h1 className="hidden">Upgrade PC — сайт, на которым вы можете купить лучшие комплектующие для компьютера с Aliexpess по лучшим ценам, так же сможете купить уже готовую сборку</h1>
   </section>
 );
 
