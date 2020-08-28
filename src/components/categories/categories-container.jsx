@@ -13,7 +13,7 @@ const CategoriesContainer = ({ categories, getCategories, cleanCategories }) => 
     return () => cleanCategories();
   }, [url]);
   if (!categories) return <FallBack />;
-  return <Categories categories={categories} />;
+  return <Categories categories={categories} url={url} />;
 };
 
 const mapState = (state) => ({

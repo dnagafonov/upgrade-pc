@@ -16,6 +16,7 @@ const Goods = ({ items, url }) => {
           <meta property="og:url" content={`https://upgradepc.ru${url}`} />
           <meta property="og:image" content="https://i.ibb.co/BcP1pQZ/og-img.png" />
           <meta property="og:type" content="product.group" />
+          <link rel="canonical" href={`https://upgradepc.ru${url}`}/>
         </Helmet>
         <BreadcrumbContainer />
         <SortGoods />
