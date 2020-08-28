@@ -4,6 +4,7 @@ import GoodInfo from "./__info/good__info";
 import BreadcrumbContainer from "../../components/breadcrumb/breadcrumb-container";
 import Wrapper from "../../components/common/wrapper/wrapper";
 import { Helmet } from "react-helmet-async";
+import { DiscussionEmbed } from "disqus-react";
 
 import "./good.scss";
 
@@ -19,9 +20,19 @@ const Good = ({ good, url }) => {
           <meta property="og:url" content={`https://upgradepc.ru${url}`} />
           <meta property="og:type" content="product" />
           <meta property="og:image" content={good.img} />
+          <link rel="canonical" href={`https://upgradepc.ru${url}`} />
         </Helmet>
         <BreadcrumbContainer />
         <GoodInfo {...good} />
+        <DiscussionEmbed
+          shortname="upgradepc"
+          config={{
+            url: `https://upgradepc.ru${url}`,
+            identifier: url,
+            title: good.name,
+            language: "ru_RU"
+          }}
+        />
       </Wrapper>
     </main>
   );
@@ -29,16 +40,16 @@ const Good = ({ good, url }) => {
 
 Good.propTypes = {
   good: PropTypes.exact({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.number,
     img: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    oldPrice: PropTypes.number.isRequired,
-    path: PropTypes.string.isRequired
+    oldPrice: PropTypes.number,
+    path: PropTypes.string.isRequired,
   }).isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 export default Good;

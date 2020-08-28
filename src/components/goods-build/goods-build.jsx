@@ -6,6 +6,7 @@ import SliderGoodsContaner from "../common/slider-goods/slider-goods-container";
 import BreadcrumbContainer from "../breadcrumb/breadcrumb-container";
 import GoodCharacteristics from "../common/good-characteristics/good-characteristics";
 import { Helmet } from "react-helmet-async";
+import { DiscussionEmbed } from 'disqus-react';
 
 import "./goods-build.scss";
 
@@ -20,11 +21,21 @@ const GoodsBuild = (props) => {
           <meta property="og:url" content={`https://upgradepc.ru${props.url}`} />
           <meta property="og:type" content="product" />
           <meta property="og:image" content={props.img} />
+          <link rel="canonical" href={`https://upgradepc.ru${props.url}`}/>
         </Helmet>
         <BreadcrumbContainer />
         <GoodsBuildInfo {...props} />
         <SliderGoodsContaner {...props.components} />
         <GoodCharacteristics description={props.description} />
+        <DiscussionEmbed 
+          shortname= "upgradepc"
+          config={{
+            url: `https://upgradepc.ru${url}`,
+            identifier: url,
+            title: props.name,
+            language: "ru_RU"
+          }} 
+        />
       </Wrapper>
     </main>
   );

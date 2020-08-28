@@ -14,7 +14,7 @@ const Breadcrumb = ({ url }) => (
 );
 
 Breadcrumb.propTypes = {
-  url: PropTypes.string.isRequired
+  url: PropTypes.string
 }
 
 export default Breadcrumb;
