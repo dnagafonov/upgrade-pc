@@ -14,7 +14,7 @@ import "./footer.scss";
 const Footer = () => (
   <footer className="footer media1220">
     <Wrapper>
-      <Space direction="vertical" size="middle">
+      <Space direction="vertical" size={10}>
         <Link to="/" className="link">
           <Image src={logo} alt="logo" width="130" />
         </Link>

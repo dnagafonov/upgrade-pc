@@ -7,6 +7,29 @@ import { Helmet } from "react-helmet-async";
 
 import "./home.scss";
 
+const Home = () => {
+  return (
+    <div className="home media1220">
+      <Wrapper>
+        <Helmet>
+          <meta name="description" content="Upgrade PC — сайт, на которым вы можете купить лучшие комплектующие для компьютера с Aliexpess по лучшим ценам, так же сможете купить уже готовую сборку" />
+          <meta name="keywords" content="Заказать дешевый компьютер с Aliexpress, собрать ПК с алиэкспресс,сборка ПК,сборка компьютера самостоятельно,как собрать ПК,дешевый ПК с алиэкспресс,школьный ПК,современный ПК,игровой ПК,недорогой ПК,купить компьютер с алиэкспресс,сборки с совместимостью,сборка игрового ПК,конфигурации ПК с алиэкспресс,дешевый ПК,сборка домашнего ПК, ПК с алиэкспресс, Сборка компьютера, Современный ПК, Дешевые игровые сборки, б/у запчасти сборки, б/у  компьютер, б/у дешевый компьютер, мощные игоровые сборки, купить мощный компьютер дешево, aliexpress компьютер, aliexpress комплектующие, новые мощные сборки 2020" />
+          <meta property="og:title" content="Upgrade PC" />
+          <meta property="og:url" content={`https://upgradepc.ru`} />
+          <meta property="og:type" content="product.group" />
+          <meta property="og:image" content="https://i.ibb.co/BcP1pQZ/og-img.png" />
+        </Helmet>
+        <Space size={10} direction="vertical">
+          <PromotionContainer data={promo1} />
+          <SliderGoodsContaner name="Материнские платы" items={mothers} />
+          <SliderGoodsContaner name="Процессоры" items={proc} />
+        </Space>
+      </Wrapper>
+      <h1 className="hidden">Upgrade PC — сайт, на которым вы можете купить лучшие комплектующие для компьютера с Aliexpess по лучшим ценам, так же сможете купить уже готовую сборку</h1>
+    </div>
+  );
+};
+
 const proc = [
   {
     img: "https://ae01.alicdn.com/kf/H73a256ac749944d88ee72f2d78dbf01bw/Intel-Xeon-E5-2696v2-E5-2696-V2-2-5.jpg",
@@ -83,28 +106,5 @@ const promo1 = {
   img: "https://i.ibb.co/LY6h96V/rock.png",
   path: "components/processors/lga2011"
 }
-
-const Home = () => {
-  return (
-    <div className="home media1220">
-      <Wrapper>
-        <Helmet>
-          <meta name="description" content="Upgrade PC — сайт, на которым вы можете купить лучшие комплектующие для компьютера с Aliexpess по лучшим ценам, так же сможете купить уже готовую сборку" />
-          <meta name="keywords" content="Заказать дешевый компьютер с Aliexpress, собрать ПК с алиэкспресс,сборка ПК,сборка компьютера самостоятельно,как собрать ПК,дешевый ПК с алиэкспресс,школьный ПК,современный ПК,игровой ПК,недорогой ПК,купить компьютер с алиэкспресс,сборки с совместимостью,сборка игрового ПК,конфигурации ПК с алиэкспресс,дешевый ПК,сборка домашнего ПК, ПК с алиэкспресс, Сборка компьютера, Современный ПК, Дешевые игровые сборки, б/у запчасти сборки, б/у  компьютер, б/у дешевый компьютер, мощные игоровые сборки, купить мощный компьютер дешево, aliexpress компьютер, aliexpress комплектующие, новые мощные сборки 2020" />
-          <meta property="og:title" content="Upgrade PC" />
-          <meta property="og:url" content={`https://upgradepc.ru`} />
-          <meta property="og:type" content="product.group" />
-          <meta property="og:image" content="https://i.ibb.co/BcP1pQZ/og-img.png" />
-        </Helmet>
-        <Space size={10} direction="vertical">
-          <PromotionContainer data={promo1} />
-          <SliderGoodsContaner name="Материнские платы" items={mothers} />
-          <SliderGoodsContaner name="Процессоры" items={proc} />
-        </Space>
-      </Wrapper>
-      <h1 className="hidden">Upgrade PC — сайт, на которым вы можете купить лучшие комплектующие для компьютера с Aliexpess по лучшим ценам, так же сможете купить уже готовую сборку</h1>
-    </div>
-  );
-};
 
 export default Home;

@@ -1,14 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import stub from "@images/img-stub.svg";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import "./image.scss";
 
 const Image = ({ className = "", width, height, src = stub, alt }) => {
   const style = { width: `${width}px`, height: `${height}px` };
   return (
     <div className={`${className} image`} style={style}>
-      <img className="img" src={src} alt={alt} />
+      <LazyLoadImage
+        className="img"
+        alt={alt}
+        effect="blur"
+        src={src} 
+      />
     </div>
   );
 };
