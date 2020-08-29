@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +10,6 @@ import FallBack from "../common/fallback/fallback";
 import { ToastContainer } from "react-toastify";
 import Footer from "../footer/footer";
 import ScrollToTop from "../common/scroll-to-top/scroll-to-top";
-import { Modal } from "antd";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./app.scss";
@@ -22,19 +21,8 @@ const GoodsBuild = React.lazy(() => import("../goods-build/goods-build-container
 const NotFound = React.lazy(() => import("../not-found/not-found"));
 const Home = React.lazy(() => import("../home/home"));
 
-const config = {
-  title: "Внимание!",
-  centered: true,
-  className: "my-modal",
-  content: <div>Сайт все еще находится в стадии активной разработки!</div>,
-};
-
 //FIX
 const App = () => {
-  const [modal, contextHolder] = Modal.useModal();
-  useEffect(() => {
-    modal.warning(config);
-  }, []);
   return (
     <div className="app">
       <Router>
@@ -42,7 +30,7 @@ const App = () => {
         <Header />
         <Suspense fallback={<FallBack />}>
           <Switch>
-            {p2
+            {pages
               .map(({ component, paths }) =>
                 paths.map((path) => (
                   <Route exact path={path} component={component} key={path} />
@@ -56,7 +44,6 @@ const App = () => {
               <NotFound />
             </Route>
           </Switch>
-          {contextHolder}
           <Footer />
           <ScrollToTop />
           <ToastContainer limit={3} />
@@ -66,7 +53,7 @@ const App = () => {
   );
 };
 
-const p2 = [
+const pages = [
   {
     component: CategoriesContainer,
     paths: [

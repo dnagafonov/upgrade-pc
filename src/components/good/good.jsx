@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 import { DiscussionEmbed } from "disqus-react";
 
 import "./good.scss";
+import { Space } from "antd";
 
 const Good = ({ good, url }) => {
   return (
@@ -23,16 +24,18 @@ const Good = ({ good, url }) => {
           <link rel="canonical" href={`https://upgradepc.ru${url}`} />
         </Helmet>
         <BreadcrumbContainer />
-        <GoodInfo {...good} />
-        <DiscussionEmbed
-          shortname="upgradepc"
-          config={{
-            url: `https://upgradepc.ru${url}`,
-            identifier: url,
-            title: good.name,
-            language: "ru_RU"
-          }}
-        />
+        <Space size={10} direction="vertical">
+          <GoodInfo {...good} />
+          <DiscussionEmbed
+            shortname="upgradepc"
+            config={{
+              url: `https://upgradepc.ru${url}`,
+              identifier: url,
+              title: good.name,
+              language: "ru_RU",
+            }}
+          />
+        </Space>
       </Wrapper>
     </main>
   );

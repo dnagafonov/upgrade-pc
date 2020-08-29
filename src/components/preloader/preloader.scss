@@ -1,0 +1,19 @@
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 1s;
+  > img {
+    animation: 1.8s infinite preloader;
+  }
+}
+
+@keyframes preloader {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.05); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

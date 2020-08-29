@@ -3,6 +3,8 @@
   RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
+  RewriteCond %{HTTP_HOST} ^www.upgradepc.ru$ [NC]
+  RewriteRule ^(.*)$ https://upgradepc.ru/$1 [R=301,L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
