@@ -16,7 +16,7 @@ const Footer = () => (
     <Wrapper>
       <Space direction="vertical" size={10}>
         <Link to="/" className="link">
-          <Image src={logo} alt="logo" width="130" />
+          <Image src={logo} alt="logo" width="130px" />
         </Link>
         <SocialLinks />
         <Note>support@upgradepc.ru</Note>

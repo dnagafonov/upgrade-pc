@@ -7,7 +7,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import "./image.scss";
 
 const Image = ({ className = "", width, height, src = stub, alt }) => {
-  const style = { width: `${width}px`, height: `${height}px` };
+  const style = { width, height };
   return (
     <div className={`${className} image`} style={style}>
       <LazyLoadImage

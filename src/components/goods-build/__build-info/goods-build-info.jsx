@@ -9,7 +9,7 @@ import "./goods-build-info.scss";
 
 const GoodsBuildInfo = ({ img, name, price, oldPrice, lists }) => (
   <section className="goods-build-info">
-    <Image className="goods-build__image" src={img} alt={name} width="550" />
+    <Image className="goods-build__image" src={img} alt={name} width="550px" />
     <article className="goods-build-info__main">
       <h1 className="hidden">{name}</h1>
       <div className="name">{name}</div>

@@ -13,7 +13,7 @@ import HeaderNav from "../header/-nav/header-nav";
 const HeaderLogo = ({ openDrawer, visible }) => (
   <div className="header-logo media1220">
     <Link to="/" className="link">
-      <Image src={logo} alt="logo" width="130" />
+      <Image src={logo} alt="logo" width="130px" />
     </Link>
     <Button onClick={openDrawer}>
       <UnorderedListOutlined />

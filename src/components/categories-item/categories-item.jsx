@@ -7,7 +7,7 @@ import "./categories-item.scss";
 
 const CategoriesItem = ({ img, name, redirect }) => (
   <div className="categories-item" onClick={redirect}>
-    <Image src={img} alt={name} width="260" />
+    <Image src={img} alt={name} width="260px" />
     <Note>{name}</Note>
   </div>
 );

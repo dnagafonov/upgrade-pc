@@ -10,7 +10,7 @@ import "./good-item.scss";
 
 const GoodItem = ({ img, name, price, oldPrice, path }) => (
   <div className="good-item">
-    <Image src={img} alt={name} width="260" height="260" />
+    <Image src={img} alt={name} width="260px" height="260px" />
     <Link to={path}>
       <Button>→</Button>
     </Link>
