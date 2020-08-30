@@ -1,13 +1,23 @@
 @import "@scss/const.scss";
 
 .promotion {
+  position: relative;
   max-width: 1200px;
   height: 500px;
   border-radius: $br;
-  background-clip: border-box;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  z-index: 0;
+  
+  .img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: 50% 60%; //FIX
+    z-index: -1;
+  }
+
   .promotion__info {
     margin-left: 20px;
   }
