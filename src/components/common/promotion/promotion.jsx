@@ -4,12 +4,13 @@ import PromotionInfo from "./__info/promotion__info";
 import AlphaContainer from "../alpha-container/alpha-container";
 
 import "./promotion.scss";
+import Image from "../image/image";
 
 const Promotion = ({ name, description, img, path }) => {
-  const style = { backgroundImage: `url(${img})` };
   return (
-    <section className="promotion" style={style}>
+    <section className="promotion">
       <AlphaContainer>
+        <img className="img" src={img} alt={name} width="100%" />
         <PromotionInfo name={name} description={description} path={path} />
       </AlphaContainer>
     </section>
